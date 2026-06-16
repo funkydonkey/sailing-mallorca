@@ -1,18 +1,546 @@
-  "tabs": {
-    "gallery": {
-      "heading": "Balearic<br>Blue",
-      "subheading": "Откройте для себя скрытые жемчужины Майорки — от драматичных скал Кала-Пи до белоснежного песка Эс-Тренк."
+{
+  "ru": {
+    "meta": {
+      "pageTitle": "Sailing Mallorca — Balearic Azure",
+      "description": "Sailing Mallorca — парусное приключение на Балеарских островах. Откройте для себя Кала-Пи, Эс-Тренк, Порт-д'Андратч и другие жемчужины Майорки.",
+      "ogTitle": "Парусное приключение по Майорке 🌊⛵",
+      "ogDescription": "Неделя под парусом: Пальма, Порт-д'Андратч, Эс-Тренк, Кала-Пи. Bavaria C50 Style, опытный шкипер, до 8 человек. Острова, ветер и синее Балеарское море.",
+      "ogUrl": "https://funkydonkey.github.io/sailing-mallorca/",
+      "appleTitle": "Sailing Mallorca"
+    },
+    "tabs": {
+      "gallery": {
+        "heading": "Balearic<br>Azure",
+        "subheading": "Откройте для себя скрытые жемчужины Майорки — от драматичных скал Кала-Пи до белоснежных пляжей Эс-Тренк."
+      },
+      "boat": {
+        "name": "Bavaria C50 Style",
+        "year": "2024",
+        "subheading": "Современная парусная яхта премиум-класса с просторными каютами и полным оснащением для комфортного путешествия по Балеарскому морю.",
+        "specsHeading": "Технические характеристики",
+        "specs": [
+          {
+            "icon": "straighten",
+            "value": "15.0m",
+            "label": "Длина"
+          },
+          {
+            "icon": "bed",
+            "value": "4+1",
+            "label": "Каюты"
+          },
+          {
+            "icon": "group",
+            "value": "8+2",
+            "label": "Места"
+          },
+          {
+            "icon": "shower",
+            "value": "3",
+            "label": "WC/душ"
+          }
+        ],
+        "equipmentHeading": "Премиум оснащение",
+        "equipment": [
+          {
+            "icon": "navigation",
+            "heading": "GPS навигатор",
+            "description": "Современная картплоттерная система с актуальными морскими картами Балеарских островов"
+          },
+          {
+            "icon": "sync",
+            "heading": "Автопилот",
+            "description": "Автоматическое управление курсом для комфортных переходов на длинных дистанциях"
+          },
+          {
+            "icon": "solar_power",
+            "heading": "Солнечные панели",
+            "description": "Автономное электроснабжение на якорных стоянках в уединённых бухтах"
+          }
+        ]
+      },
+      "route": {
+        "heading": "The Balearic<br>Odyssey",
+        "subheading": "Семидневный маршрут по живописному побережью Майорки. 122 морские мили удовольствия."
+      },
+      "info": {
+        "heading": "Your Balearic<br>Adventure",
+        "subheading": "Все включено для комфортного путешествия: аренда яхты, шкипер, постельное белье, топливо для перехода в первую марину."
+      }
+    },
+    "price": {
+      "perPerson": 1200,
+      "currency": "€"
+    },
+    "ui": {
+      "priceLabel": "Стоимость на человека",
+      "priceDuration": "7 дней / 6 ночей",
+      "faqHeading": "Частые вопросы",
+      "routeDistanceLabel": "Общая дистанция",
+      "included": {
+        "heading": "Что включено",
+        "icon": "check_circle",
+        "iconColor": "text-primary",
+        "items": [
+          {
+            "icon": "sailing",
+            "iconColor": "text-secondary",
+            "title": "Аренда яхты Bavaria C50 Style",
+            "subtitle": "7 дней с полным оснащением"
+          },
+          {
+            "icon": "person",
+            "iconColor": "text-secondary",
+            "title": "Профессиональный шкипер",
+            "subtitle": "С лицензией и знанием местных вод"
+          },
+          {
+            "icon": "bed",
+            "iconColor": "text-secondary",
+            "title": "Постельное белье и полотенца",
+            "subtitle": "Смена белья раз в неделю"
+          },
+          {
+            "icon": "local_gas_station",
+            "iconColor": "text-secondary",
+            "title": "Топливо до первой марины",
+            "subtitle": "Для начала путешествия"
+          }
+        ]
+      },
+      "additional": {
+        "heading": "Дополнительные расходы",
+        "icon": "credit_card",
+        "iconColor": "text-tertiary",
+        "items": [
+          {
+            "icon": "restaurant",
+            "iconColor": "text-on-surface-variant",
+            "title": "Питание",
+            "subtitle": "~€30-50/день на человека"
+          },
+          {
+            "icon": "anchor",
+            "iconColor": "text-on-surface-variant",
+            "title": "Марины и стоянки",
+            "subtitle": "~€20-40/ночь за яхту"
+          },
+          {
+            "icon": "local_gas_station",
+            "iconColor": "text-on-surface-variant",
+            "title": "Топливо",
+            "subtitle": "~€150-200 за неделю"
+          },
+          {
+            "icon": "tour",
+            "iconColor": "text-on-surface-variant",
+            "title": "Экскурсии",
+            "subtitle": "Пещеры Арта, Cap de Formentor (опционально)"
+          }
+        ]
+      },
+      "distanceUnit": "мили"
     },
     "route": {
-      "heading": "The Mallorca<br>Odyssey",
-      "subheading": "Семидневный спокойный маршрут по самым живописным бухтам южного и юго-западного побережья. 122 морские мили чистого удовольствия."
+      "totalDistance": 122,
+      "days": [
+        {
+          "number": "01",
+          "color": "primary",
+          "distance": "20 миль",
+          "title": "Пальма — Порт-д'Андратч",
+          "description": "Старт из марины Пальма-де-Майорка. Знакомство с яхтой и командой, брифинг по безопасности. Переход вдоль юго-западного берега через бухту Санта-Понса в уютный Порт-д'Андратч.",
+          "duration": "~4 часа в пути"
+        },
+        {
+          "number": "02",
+          "color": "secondary",
+          "distance": "14 миль",
+          "title": "Андратч — Санта-Понса",
+          "description": "Спокойный день у острова Эль-Торо и в бухте Камп-де-Мар. Купание в прозрачной воде, обед на якоре, вечерняя стоянка в Санта-Понса.",
+          "duration": "~3 часа в пути"
+        },
+        {
+          "number": "03",
+          "color": "primary",
+          "distance": "24 мили",
+          "title": "Санта-Понса — Кала-Пи",
+          "description": "Переход вдоль южного берега мимо Портальс. Финиш в Кала-Пи — драматичной узкой бухте между высокими скалами, одной из самых эффектных на острове.",
+          "duration": "~4.5 часа в пути"
+        },
+        {
+          "number": "04",
+          "color": "secondary",
+          "distance": "14 миль",
+          "title": "Кала-Пи — Колония-де-Сант-Жорди",
+          "description": "Путь к Эс-Тренк — пляжу с белоснежным песком и бирюзовой водой в карибском стиле. Якорная стоянка и вечер в рыбацком городке Колония-де-Сант-Жорди.",
+          "duration": "~3 часа в пути"
+        },
+        {
+          "number": "05",
+          "color": "primary",
+          "distance": "10 миль",
+          "title": "День у Эс-Тренк",
+          "description": "Самый расслабленный день недели. Короткий хоп вдоль заповедного побережья, купание, SUP, обед на борту. Никакой спешки — просто море и солнце.",
+          "duration": "~2 часа в пути"
+        },
+        {
+          "number": "06",
+          "color": "secondary",
+          "distance": "24 мили",
+          "title": "Колония — Эль-Торо / Портальс",
+          "description": "Возвращение на запад к острову Эль-Торо и гламурной марине Пуэрто-Портальс. Прогулка по набережной, ужин и коктейль на закате.",
+          "duration": "~4.5 часа в пути"
+        },
+        {
+          "number": "07",
+          "color": "primary",
+          "distance": "16 миль",
+          "title": "Портальс — Пальма",
+          "description": "Финальный переход в бухту Пальмы с купанием у пляжей Ильетес. Возврат в марину, прощальный ужин и итоги незабываемой недели на Балеарах.",
+          "duration": "~3 часа в пути"
+        }
+      ]
     },
-    "info": {
-      "heading": "Your Mallorca<br>Adventure",
-      "subheading": "В стоимость включено: аренда новой яхты, свой капитан, марины, постельное бельё, топливо. Перелёт и питание оплачиваются отдельно."
-    }
+    "faq": [
+      {
+        "question": "Нужен ли опыт парусного спорта?",
+        "answer": "Нет, опыт не требуется! С нами идёт свой опытный капитан, который управляет яхтой и отвечает за безопасность. Вы можете участвовать в управлении (поднимать паруса, держать штурвал, швартоваться) или просто наслаждаться путешествием. Маршрут спокойный, с короткими переходами и лёгким возвратом в марину."
+      },
+      {
+        "question": "Где спать и как устроен быт на яхте?",
+        "answer": "У нас новая Bavaria C50 Style (2024): 4 двухместные каюты для гостей плюс отдельная каюта капитана. На борту 3 санузла с душем, полностью оборудованная кухня (плита, холодильник, посуда), просторный салон, отопление и кондиционер. Постельное бельё и полотенца включены."
+      },
+      {
+        "question": "Какая погода в октябре? Не холодно ли?",
+        "answer": "Начало октября на Майорке — мягкое бабье лето: днём +22-25°C, вода ещё тёплая, около +23°C, можно купаться. Ветра лёгкие и предсказуемые, юго-западный берег закрыт от волны. Вечерами прохладнее (~16°C), поэтому на яхте есть отопление. Идеальное время для спокойного похода без толп туристов."
+      },
+      {
+        "question": "Нужна ли виза?",
+        "answer": "Испания входит в Шенгенскую зону, поэтому нужна шенгенская виза. Рекомендуем оформлять заранее, за 2-3 месяца до поездки. Вылет удобен из большинства городов Европы — прямые рейсы в Пальму есть отовсюду, перелёт оплачивается отдельно."
+      }
+    ],
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Пальма",
+        "description": "Кафедральный собор Ла-Сеу и старый город",
+        "image": "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=1200&q=80"
+      },
+      {
+        "id": 2,
+        "title": "Порт-д'Андратч",
+        "description": "Закрытая бухта на юго-западе острова",
+        "image": "https://images.unsplash.com/photo-1555990538-f8f1c0b3d7c7?w=800&q=80"
+      },
+      {
+        "id": 3,
+        "title": "Эс-Тренк",
+        "description": "Белый песок и бирюзовая вода",
+        "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1000&q=80"
+      },
+      {
+        "id": 4,
+        "title": "Кала-Пи",
+        "description": "Драматичная бухта между скалами",
+        "image": "https://images.unsplash.com/photo-1555990538-9f5d0b6dbd1f?w=800&q=80"
+      },
+      {
+        "id": 5,
+        "title": "Санта-Понса",
+        "description": "Бирюзовые бухты для купания",
+        "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
+      },
+      {
+        "id": 6,
+        "title": "Пуэрто-Портальс",
+        "description": "Гламурная марина и закаты",
+        "image": "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=600&q=80"
+      },
+      {
+        "id": 7,
+        "title": "Ильетес",
+        "description": "Пляжи в бухте Пальмы",
+        "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1000&q=80"
+      },
+      {
+        "id": 8,
+        "title": "Закат",
+        "description": "Парусная романтика на Балеарах",
+        "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80"
+      }
+    ]
   },
-  "price": {
-    "perPerson": 1040,
-    "currency": "€"
-  },
+  "en": {
+    "meta": {
+      "pageTitle": "Sailing Mallorca — Balearic Azure",
+      "description": "Sailing Mallorca — a sailing adventure in the Balearic Islands. Discover Cala Pi, Es Trenc, Port d'Andratx and the hidden gems of Mallorca.",
+      "ogTitle": "Sailing Adventure in Mallorca 🌊⛵",
+      "ogDescription": "A week under sail: Palma, Port d'Andratx, Es Trenc, Cala Pi. Bavaria C50 Style, experienced skipper, up to 8 guests. Islands, wind and the blue Balearic Sea.",
+      "ogUrl": "https://funkydonkey.github.io/sailing-mallorca/",
+      "appleTitle": "Sailing Mallorca"
+    },
+    "tabs": {
+      "gallery": {
+        "heading": "Balearic<br>Azure",
+        "subheading": "Discover the hidden gems of Mallorca — from the dramatic cliffs of Cala Pi to the white sands of Es Trenc."
+      },
+      "boat": {
+        "name": "Bavaria C50 Style",
+        "year": "2024",
+        "subheading": "A modern premium sailing yacht with spacious cabins and full equipment for a comfortable journey in the Balearic Sea.",
+        "specsHeading": "Technical Specifications",
+        "specs": [
+          {
+            "icon": "straighten",
+            "value": "15.0m",
+            "label": "Length"
+          },
+          {
+            "icon": "bed",
+            "value": "4+1",
+            "label": "Cabins"
+          },
+          {
+            "icon": "group",
+            "value": "8+2",
+            "label": "Capacity"
+          },
+          {
+            "icon": "shower",
+            "value": "3",
+            "label": "WC/Shower"
+          }
+        ],
+        "equipmentHeading": "Premium Equipment",
+        "equipment": [
+          {
+            "icon": "navigation",
+            "heading": "GPS Chart Plotter",
+            "description": "Modern chart plotter system with up-to-date nautical charts of the Balearic Islands"
+          },
+          {
+            "icon": "sync",
+            "heading": "Autopilot",
+            "description": "Automatic course control for comfortable long-distance passages"
+          },
+          {
+            "icon": "solar_power",
+            "heading": "Solar Panels",
+            "description": "Autonomous power supply at anchor in secluded bays"
+          }
+        ]
+      },
+      "route": {
+        "heading": "The Balearic<br>Odyssey",
+        "subheading": "A seven-day route along the beautiful coastline of Mallorca. 122 nautical miles of pure pleasure."
+      },
+      "info": {
+        "heading": "Your Balearic<br>Adventure",
+        "subheading": "Everything included for a comfortable journey: yacht charter, skipper, bed linen, fuel for the first marina."
+      }
+    },
+    "price": {
+      "perPerson": 1200,
+      "currency": "€"
+    },
+    "ui": {
+      "priceLabel": "Price per person",
+      "priceDuration": "7 days / 6 nights",
+      "faqHeading": "FAQ",
+      "routeDistanceLabel": "Total distance",
+      "included": {
+        "heading": "What's Included",
+        "icon": "check_circle",
+        "iconColor": "text-primary",
+        "items": [
+          {
+            "icon": "sailing",
+            "iconColor": "text-secondary",
+            "title": "Bavaria C50 Style Yacht Charter",
+            "subtitle": "7 days fully equipped"
+          },
+          {
+            "icon": "person",
+            "iconColor": "text-secondary",
+            "title": "Professional Skipper",
+            "subtitle": "Licensed with local knowledge"
+          },
+          {
+            "icon": "bed",
+            "iconColor": "text-secondary",
+            "title": "Bed Linen & Towels",
+            "subtitle": "Fresh linen once a week"
+          },
+          {
+            "icon": "local_gas_station",
+            "iconColor": "text-secondary",
+            "title": "Fuel to First Marina",
+            "subtitle": "For the start of the journey"
+          }
+        ]
+      },
+      "additional": {
+        "heading": "Additional Costs",
+        "icon": "credit_card",
+        "iconColor": "text-tertiary",
+        "items": [
+          {
+            "icon": "restaurant",
+            "iconColor": "text-on-surface-variant",
+            "title": "Food & Drinks",
+            "subtitle": "~€30-50/day per person"
+          },
+          {
+            "icon": "anchor",
+            "iconColor": "text-on-surface-variant",
+            "title": "Marina Fees",
+            "subtitle": "~€20-40/night for the yacht"
+          },
+          {
+            "icon": "local_gas_station",
+            "iconColor": "text-on-surface-variant",
+            "title": "Fuel",
+            "subtitle": "~€150-200 per week"
+          },
+          {
+            "icon": "tour",
+            "iconColor": "text-on-surface-variant",
+            "title": "Excursions",
+            "subtitle": "Artà Caves, Cap de Formentor (optional)"
+          }
+        ]
+      },
+      "distanceUnit": "nm"
+    },
+    "route": {
+      "totalDistance": 122,
+      "days": [
+        {
+          "number": "01",
+          "color": "primary",
+          "distance": "20 nm",
+          "title": "Palma — Port d'Andratx",
+          "description": "Depart from Palma de Mallorca marina. Meet the boat and crew, safety briefing. Sail along the southwest coast through Santa Ponsa bay to the charming Port d'Andratx.",
+          "duration": "~4 hours sailing"
+        },
+        {
+          "number": "02",
+          "color": "secondary",
+          "distance": "14 nm",
+          "title": "Andratx — Santa Ponsa",
+          "description": "A relaxed day near El Toro island and Camp de Mar bay. Swimming in crystal-clear water, lunch at anchor, evening mooring in Santa Ponsa.",
+          "duration": "~3 hours sailing"
+        },
+        {
+          "number": "03",
+          "color": "primary",
+          "distance": "24 nm",
+          "title": "Santa Ponsa — Cala Pi",
+          "description": "Sailing along the south coast past Portals. Arriving at Cala Pi — a dramatic narrow inlet between towering cliffs, one of the most spectacular on the island.",
+          "duration": "~4.5 hours sailing"
+        },
+        {
+          "number": "04",
+          "color": "secondary",
+          "distance": "14 nm",
+          "title": "Cala Pi — Colonia de Sant Jordi",
+          "description": "Heading to Es Trenc — a beach with white sand and turquoise Caribbean-style water. Anchor stop and evening in the fishing village of Colonia de Sant Jordi.",
+          "duration": "~3 hours sailing"
+        },
+        {
+          "number": "05",
+          "color": "primary",
+          "distance": "10 nm",
+          "title": "Day at Es Trenc",
+          "description": "The most relaxing day of the week. Short hop along the protected coastline, swimming, SUP, lunch on board. No rush — just sea and sun.",
+          "duration": "~2 hours sailing"
+        },
+        {
+          "number": "06",
+          "color": "secondary",
+          "distance": "24 nm",
+          "title": "Colonia — El Toro / Portals",
+          "description": "Heading back west to El Toro island and the glamorous Puerto Portals marina. Walk along the promenade, dinner and a cocktail at sunset.",
+          "duration": "~4.5 hours sailing"
+        },
+        {
+          "number": "07",
+          "color": "primary",
+          "distance": "16 nm",
+          "title": "Portals — Palma",
+          "description": "Final crossing into Palma bay with swimming at Illetes beach. Return to the marina, farewell dinner and memories of an unforgettable week in the Balearics.",
+          "duration": "~3 hours sailing"
+        }
+      ]
+    },
+    "faq": [
+      {
+        "question": "Do I need sailing experience?",
+        "answer": "No experience needed! We have our own experienced skipper who handles the boat and is responsible for safety. You can participate in sailing (raise sails, take the helm, help with mooring) or simply enjoy the journey. The route is calm, with short passages and easy marina returns."
+      },
+      {
+        "question": "Where do we sleep and what's life like on board?",
+        "answer": "We have a brand-new Bavaria C50 Style (2024): 4 double guest cabins plus a separate skipper's cabin. On board: 3 bathrooms with shower, fully equipped galley (stove, fridge, crockery), spacious saloon, heating and air conditioning. Bed linen and towels included."
+      },
+      {
+        "question": "What's the weather like in October? Is it cold?",
+        "answer": "Early October in Mallorca is a warm Indian summer: daytime temperatures +22-25°C, sea water still warm at around +23°C — perfect for swimming. Winds are light and predictable, the southwest coast is sheltered from waves. Evenings are cooler (~16°C), but the yacht has heating. The ideal time for a relaxed cruise without crowds."
+      },
+      {
+        "question": "Do I need a visa?",
+        "answer": "Spain is part of the Schengen zone, so a Schengen visa is required. We recommend applying well in advance, 2-3 months before the trip. Flights are convenient from most European cities — direct flights to Palma are available everywhere, flights are paid separately."
+      }
+    ],
+    "gallery": [
+      {
+        "id": 1,
+        "title": "Palma",
+        "description": "La Seu Cathedral and the old city",
+        "image": "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=1200&q=80"
+      },
+      {
+        "id": 2,
+        "title": "Port d'Andratx",
+        "description": "Sheltered bay on the southwest of the island",
+        "image": "https://images.unsplash.com/photo-1555990538-f8f1c0b3d7c7?w=800&q=80"
+      },
+      {
+        "id": 3,
+        "title": "Es Trenc",
+        "description": "White sand and turquoise water",
+        "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1000&q=80"
+      },
+      {
+        "id": 4,
+        "title": "Cala Pi",
+        "description": "Dramatic inlet between towering cliffs",
+        "image": "https://images.unsplash.com/photo-1555990538-9f5d0b6dbd1f?w=800&q=80"
+      },
+      {
+        "id": 5,
+        "title": "Santa Ponsa",
+        "description": "Turquoise bays for swimming",
+        "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
+      },
+      {
+        "id": 6,
+        "title": "Puerto Portals",
+        "description": "Glamorous marina and sunsets",
+        "image": "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=600&q=80"
+      },
+      {
+        "id": 7,
+        "title": "Illetes",
+        "description": "Beaches in Palma Bay",
+        "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1000&q=80"
+      },
+      {
+        "id": 8,
+        "title": "Sunset",
+        "description": "Sailing romance in the Balearics",
+        "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80"
+      }
+    ]
+  }
+}

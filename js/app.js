@@ -1,81 +1,52 @@
-// Maritime Minimalism - Sailing Croatia Interactive Features
-// app.js
-
+// Maritime Minimalism - Sailing Mallorca Interactive Features
 (function() {
     'use strict';
 
-    function initApp() {
-        // ============================================
-        // 1. Tab Switching
-        // ============================================
+    let _content = null;
 
+    function getLang() { return localStorage.getItem('lang') || 'ru'; }
+    function setLang(lang) { localStorage.setItem('lang', lang); document.documentElement.lang = lang; }
+    function updateLangToggle(lang) {
+        const btn = document.getElementById('langToggle');
+        if (btn) btn.textContent = lang === 'ru' ? 'EN' : 'RU';
+    }
+    function renderLang(lang) {
+        if (!_content) return;
+        const data = _content[lang] || _content['ru'];
+        renderMeta(data.meta);
+        renderHeadings(data.tabs);
+        renderBoat(data.tabs.boat);
+        renderPrice(data.price);
+        renderUI(data.ui);
+        renderRoute(data.route, data.ui);
+        renderFaq(data.faq);
+        renderGallery(data.gallery);
+        updateLangToggle(lang);
+    }
+
+    function initApp() {
+        // 1. Tab Switching
         const tabButtons = document.querySelectorAll('.tab-button');
         const mobileTabButtons = document.querySelectorAll('.mobile-tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
-
         function switchTab(tabId) {
-            // Скрыть все табы
-            tabContents.forEach(content => {
-                content.classList.remove('active');
-            });
-
-            // Показать выбранный таб
-            const activeTab = document.getElementById(tabId);
-            if (activeTab) {
-                activeTab.classList.add('active');
-            }
-
-            // Обновить активное состояние кнопок (desktop)
+            tabContents.forEach(c => c.classList.remove('active'));
+            document.getElementById(tabId)?.classList.add('active');
             tabButtons.forEach(btn => {
-                if (btn.dataset.tab === tabId) {
-                    btn.style.color = '#001e40'; // primary color
-                    btn.style.fontWeight = '600';
-                } else {
-                    btn.style.color = '#43474f'; // on-surface-variant
-                    btn.style.fontWeight = '500';
-                }
+                btn.style.color = btn.dataset.tab === tabId ? '#001e40' : '#43474f';
+                btn.style.fontWeight = btn.dataset.tab === tabId ? '600' : '500';
             });
-
-            // Обновить активное состояние кнопок (mobile)
             mobileTabButtons.forEach(btn => {
-                if (btn.dataset.tab === tabId) {
-                    btn.classList.add('bg-blue-50', 'text-blue-800', 'scale-110');
-                } else {
-                    btn.classList.remove('bg-blue-50', 'text-blue-800', 'scale-110');
-                }
+                if (btn.dataset.tab === tabId) btn.classList.add('bg-blue-50','text-blue-800','scale-110');
+                else btn.classList.remove('bg-blue-50','text-blue-800','scale-110');
             });
-
-            // Прокрутить страницу вверх
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-
-        // Desktop tab buttons
-        tabButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const tabId = this.dataset.tab;
-                switchTab(tabId);
-            });
-        });
-
-        // Mobile tab buttons
-        mobileTabButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const tabId = this.dataset.tab;
-                switchTab(tabId);
-            });
-        });
-
-        // Инициализация первого таба
+        tabButtons.forEach(b => b.addEventListener('click', function() { switchTab(this.dataset.tab); }));
+        mobileTabButtons.forEach(b => b.addEventListener('click', function() { switchTab(this.dataset.tab); }));
         switchTab('gallery');
 
-        // ============================================
-        // 2. Lightbox Gallery
-        // ============================================
-
-        const galleryCards = document.querySelectorAll('.gallery-card');
+        // 2. Lightbox — reads card.dataset dynamically so lang switch updates text
         const lightbox = document.getElementById('lightbox');
         const lightboxImage = document.getElementById('lightboxImage');
         const lightboxTitle = document.getElementById('lightboxTitle');
@@ -83,95 +54,145 @@
         const closeLightboxBtn = document.getElementById('closeLightbox');
         const prevImageBtn = document.getElementById('prevImage');
         const nextImageBtn = document.getElementById('nextImage');
-
         let currentImageIndex = 0;
-        const galleryData = [];
 
-        // Собрать данные галереи
-        galleryCards.forEach((card, index) => {
-            const title = card.dataset.title;
-            const description = card.dataset.description;
-            const image = card.dataset.image;
-
-            galleryData.push({ title, description, image });
-
-            card.addEventListener('click', function() {
-                currentImageIndex = index;
-                openLightbox();
-            });
+        document.querySelectorAll('.gallery-card').forEach((card, index) => {
+            card.addEventListener('click', function() { currentImageIndex = index; openLightbox(); });
         });
 
         function openLightbox() {
-            const data = galleryData[currentImageIndex];
-            lightboxImage.src = data.image;
-            lightboxImage.alt = data.title;
-            lightboxTitle.textContent = data.title;
-            lightboxDescription.textContent = data.description;
-
+            const card = document.querySelectorAll('.gallery-card')[currentImageIndex];
+            lightboxImage.src = card.dataset.image;
+            lightboxImage.alt = card.dataset.title;
+            lightboxTitle.textContent = card.dataset.title;
+            lightboxDescription.textContent = card.dataset.description;
             lightbox.classList.add('active');
             lightbox.setAttribute('aria-hidden', 'false');
-            document.body.style.overflow = 'hidden'; // Заблокировать прокрутку фона
+            document.body.style.overflow = 'hidden';
         }
-
         function closeLightbox() {
             lightbox.classList.remove('active');
             lightbox.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = ''; // Восстановить прокрутку
+            document.body.style.overflow = '';
         }
-
         function showNextImage() {
-            currentImageIndex = (currentImageIndex + 1) % galleryData.length;
+            currentImageIndex = (currentImageIndex + 1) % document.querySelectorAll('.gallery-card').length;
             openLightbox();
         }
-
         function showPrevImage() {
-            currentImageIndex = (currentImageIndex - 1 + galleryData.length) % galleryData.length;
+            const cards = document.querySelectorAll('.gallery-card');
+            currentImageIndex = (currentImageIndex - 1 + cards.length) % cards.length;
             openLightbox();
         }
-
-        // Закрыть lightbox
         closeLightboxBtn.addEventListener('click', closeLightbox);
-
-        // Навигация
         nextImageBtn.addEventListener('click', showNextImage);
         prevImageBtn.addEventListener('click', showPrevImage);
+        lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
 
-        // Закрыть по клику вне изображения
-        lightbox.addEventListener('click', function(e) {
-            if (e.target === lightbox) {
-                closeLightbox();
-            }
-        });
-
-        // ============================================
-        // 3. Keyboard Navigation
-        // ============================================
-
+        // 3. Keyboard Nav
         document.addEventListener('keydown', function(e) {
             if (lightbox.classList.contains('active')) {
-                if (e.key === 'Escape') {
-                    closeLightbox();
-                } else if (e.key === 'ArrowRight') {
-                    showNextImage();
-                } else if (e.key === 'ArrowLeft') {
-                    showPrevImage();
-                }
+                if (e.key === 'Escape') closeLightbox();
+                else if (e.key === 'ArrowRight') showNextImage();
+                else if (e.key === 'ArrowLeft') showPrevImage();
             }
         });
 
-        // ============================================
-        // 4. FAQ Accordion
-        // ============================================
+        // 4. FAQ
+        bindFaq();
 
+        // 5. Share Button — reads meta dynamically so it reflects current lang
+        const shareButton = document.getElementById('shareButton');
+        if (shareButton) {
+            shareButton.addEventListener('click', async function() {
+                const shareData = {
+                    title: document.title,
+                    text: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
+                    url: window.location.href
+                };
+                try {
+                    if (navigator.share) {
+                        await navigator.share(shareData);
+                    } else {
+                        await navigator.clipboard.writeText(window.location.href);
+                        const orig = shareButton.innerHTML;
+                        shareButton.innerHTML = '<span class="material-symbols-outlined text-xl">check</span><span class="hidden md:inline text-sm font-label font-medium">Copied!</span>';
+                        setTimeout(() => { shareButton.innerHTML = orig; }, 2000);
+                    }
+                } catch (err) { console.error('Share failed:', err); }
+            });
+        }
+
+        // 6. Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const t = document.querySelector(this.getAttribute('href'));
+                if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // 7. Lazy Load
+        if ('IntersectionObserver' in window) {
+            const io = new IntersectionObserver((entries, obs) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting && e.target.dataset.src) {
+                        e.target.src = e.target.dataset.src;
+                        e.target.removeAttribute('data-src');
+                        obs.unobserve(e.target);
+                    }
+                });
+            });
+            document.querySelectorAll('img[data-src]').forEach(img => io.observe(img));
+        }
+
+        // 8. Fade-in animation
+        const fadeObs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.gallery-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            fadeObs.observe(card);
+        });
+
+        // 9. Language Toggle
+        const langToggle = document.getElementById('langToggle');
+        if (langToggle) {
+            langToggle.addEventListener('click', function() {
+                const newLang = getLang() === 'ru' ? 'en' : 'ru';
+                setLang(newLang);
+                renderLang(newLang);
+                bindFaq();
+            });
+        }
+
+        // 10. Focus Trap (Lightbox)
+        if (lightbox) {
+            lightbox.addEventListener('keydown', function(e) {
+                if (e.key === 'Tab') {
+                    const els = lightbox.querySelectorAll('button:not([disabled]),[tabindex]:not([tabindex="-1"])');
+                    const first = els[0], last = els[els.length - 1];
+                    if (e.shiftKey) { if (document.activeElement===first) { e.preventDefault(); last.focus(); } }
+                    else { if (document.activeElement===last) { e.preventDefault(); first.focus(); } }
+                }
+            });
+        }
+
+        console.log('Maritime Minimalism - Sailing Mallorca initialized');
+    }
+
+    // bindFaq is separate so it can be re-called after renderFaq replaces DOM on lang switch
+    function bindFaq() {
         const faqButtons = document.querySelectorAll('.faq-button');
-
         faqButtons.forEach(button => {
             button.addEventListener('click', function() {
                 const answer = this.nextElementSibling;
                 const icon = this.querySelector('.material-symbols-outlined');
                 const isExpanded = this.getAttribute('aria-expanded') === 'true';
-
-                // Закрыть все другие FAQ
                 faqButtons.forEach(btn => {
                     if (btn !== this) {
                         btn.nextElementSibling.classList.remove('active');
@@ -179,226 +200,32 @@
                         btn.setAttribute('aria-expanded', 'false');
                     }
                 });
-
-                // Переключить текущий FAQ
                 if (isExpanded) {
-                    answer.classList.remove('active');
-                    icon.classList.remove('rotate-180');
+                    answer.classList.remove('active'); icon.classList.remove('rotate-180');
                     this.setAttribute('aria-expanded', 'false');
                 } else {
-                    answer.classList.add('active');
-                    icon.classList.add('rotate-180');
+                    answer.classList.add('active'); icon.classList.add('rotate-180');
                     this.setAttribute('aria-expanded', 'true');
                 }
             });
         });
-
-        // ============================================
-        // 5. Share Button (Web Share API)
-        // ============================================
-
-        const shareButton = document.getElementById('shareButton');
-
-        if (shareButton) {
-            shareButton.addEventListener('click', async function() {
-                const shareData = {
-                    title: 'Sailing Croatia — Adriatic Azure',
-                    text: 'Откройте для себя скрытые жемчужины Адриатики на парусной яхте Bavaria C42. 7 дней незабываемого приключения!',
-                    url: window.location.href
-                };
-
-                try {
-                    // Проверить поддержку Web Share API
-                    if (navigator.share) {
-                        await navigator.share(shareData);
-                        console.log('Контент успешно поделен');
-                    } else {
-                        // Fallback: скопировать ссылку в буфер обмена
-                        await navigator.clipboard.writeText(window.location.href);
-
-                        // Показать уведомление
-                        const originalText = shareButton.innerHTML;
-                        shareButton.innerHTML = `
-                            <span class="material-symbols-outlined text-xl">check</span>
-                            <span class="hidden md:inline text-sm font-label font-medium">Скопировано!</span>
-                        `;
-
-                        setTimeout(() => {
-                            shareButton.innerHTML = originalText;
-                        }, 2000);
-                    }
-                } catch (error) {
-                    console.error('Ошибка при попытке поделиться:', error);
-                }
-            });
-        }
-
-        // ============================================
-        // 6. Smooth Scroll для якорных ссылок
-        // ============================================
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // ============================================
-        // 7. Lazy Loading для изображений (оптимизация)
-        // ============================================
-
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        if (img.dataset.src) {
-                            img.src = img.dataset.src;
-                            img.removeAttribute('data-src');
-                            observer.unobserve(img);
-                        }
-                    }
-                });
-            });
-
-            // Можно добавить data-src атрибут к изображениям для lazy loading
-            document.querySelectorAll('img[data-src]').forEach(img => {
-                imageObserver.observe(img);
-            });
-        }
-
-        // ============================================
-        // 8. Анимация появления элементов при скролле
-        // ============================================
-
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const fadeInObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Применить анимацию к карточкам галереи
-        document.querySelectorAll('.gallery-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            fadeInObserver.observe(card);
-        });
-
-        // ============================================
-        // 9. Отслеживание активной секции при скролле
-        // ============================================
-
-        // Опционально: можно добавить автоматическое переключение табов при скролле
-        // (но в данном случае табы переключаются вручную, поэтому закомментировано)
-
-        /*
-        const tabSections = document.querySelectorAll('.tab-content');
-        const tabObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-                    const tabId = entry.target.id;
-                    switchTab(tabId);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        tabSections.forEach(section => {
-            tabObserver.observe(section);
-        });
-        */
-
-        // ============================================
-        // 10. Управление состоянием для accessibility
-        // ============================================
-
-        // Обработка фокуса для клавиатурной навигации
-        const focusableElements = document.querySelectorAll(
-            'button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-        );
-
-        // Управление trap фокуса в lightbox
-        if (lightbox) {
-            lightbox.addEventListener('keydown', function(e) {
-                if (e.key === 'Tab') {
-                    const focusableContent = lightbox.querySelectorAll(
-                        'button:not([disabled]), [tabindex]:not([tabindex="-1"])'
-                    );
-                    const firstElement = focusableContent[0];
-                    const lastElement = focusableContent[focusableContent.length - 1];
-
-                    if (e.shiftKey) {
-                        if (document.activeElement === firstElement) {
-                            e.preventDefault();
-                            lastElement.focus();
-                        }
-                    } else {
-                        if (document.activeElement === lastElement) {
-                            e.preventDefault();
-                            firstElement.focus();
-                        }
-                    }
-                }
-            });
-        }
-
-        // ============================================
-        // Инициализация завершена
-        // ============================================
-
-        console.log('Maritime Minimalism - Sailing Croatia v5 initialized');
-        console.log('Design System: Maritime Minimalism');
-        console.log('Framework: Tailwind CSS 3.x + Vanilla JS');
     }
-
-    // ============================================
-    // 0. Content Loading & Rendering
-    // ============================================
 
     async function loadContentAndRender() {
         try {
             const response = await fetch('content.json');
-            if (!response.ok) {
-                throw new Error(`HTTP ${response.status}`);
-            }
-            const content = await response.json();
-            renderMeta(content.meta);
-            renderHeadings(content.tabs);
-            renderPrice(content.price);
-            renderRoute(content.route);
-            renderFaq(content.faq);
-            renderGallery(content.gallery);
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            _content = await response.json();
+            renderLang(getLang());
         } catch (error) {
             console.warn('content.json not loaded, using static fallback content:', error);
         }
     }
 
     function renderMeta(meta) {
-        if (!meta) {
-            return;
-        }
-        if (meta.pageTitle) {
-            document.title = meta.pageTitle;
-        }
-        if (meta.description) {
-            const el = document.querySelector('meta[name="description"]');
-            if (el) el.setAttribute('content', meta.description);
-        }
+        if (!meta) return;
+        if (meta.pageTitle) document.title = meta.pageTitle;
+        if (meta.description) document.querySelector('meta[name="description"]')?.setAttribute('content', meta.description);
         if (meta.ogTitle) {
             document.querySelector('meta[property="og:title"]')?.setAttribute('content', meta.ogTitle);
             document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', meta.ogTitle);
@@ -407,56 +234,107 @@
             document.querySelector('meta[property="og:description"]')?.setAttribute('content', meta.ogDescription);
             document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', meta.ogDescription);
         }
-        if (meta.ogUrl) {
-            document.querySelector('meta[property="og:url"]')?.setAttribute('content', meta.ogUrl);
-        }
-        if (meta.appleTitle) {
-            document.querySelector('meta[name="apple-mobile-web-app-title"]')?.setAttribute('content', meta.appleTitle);
-        }
+        if (meta.ogUrl) document.querySelector('meta[property="og:url"]')?.setAttribute('content', meta.ogUrl);
+        if (meta.appleTitle) document.querySelector('meta[name="apple-mobile-web-app-title"]')?.setAttribute('content', meta.appleTitle);
     }
 
     function renderHeadings(tabs) {
-        if (!tabs) {
-            return;
-        }
+        if (!tabs) return;
         ['gallery', 'route', 'info'].forEach(tab => {
-            if (!tabs[tab]) {
-                return;
-            }
+            if (!tabs[tab]) return;
             const h1 = document.getElementById(`hero-${tab}-heading`);
-            if (h1 && tabs[tab].heading) {
-                h1.innerHTML = tabs[tab].heading;
-            }
+            if (h1 && tabs[tab].heading) h1.innerHTML = tabs[tab].heading;
             const p = document.getElementById(`hero-${tab}-subheading`);
-            if (p && tabs[tab].subheading) {
-                p.textContent = tabs[tab].subheading;
-            }
+            if (p && tabs[tab].subheading) p.textContent = tabs[tab].subheading;
         });
+    }
+
+    function renderBoat(boat) {
+        if (!boat) return;
+        const set = (id, val) => { const el = document.getElementById(id); if (el && val !== undefined) el.textContent = val; };
+        set('hero-boat-name', boat.name);
+        set('boat-year', boat.year);
+        set('hero-boat-subheading', boat.subheading);
+        set('boat-specs-heading', boat.specsHeading);
+        const specsGrid = document.getElementById('boat-specs-grid');
+        if (specsGrid && boat.specs) {
+            specsGrid.innerHTML = boat.specs.map(s => `
+                <div class="glass-card rounded-xl p-6 editorial-shadow border border-outline-variant/20">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-3 block">${s.icon}</span>
+                    <div class="text-3xl font-bold text-primary mb-1 font-headline">${s.value}</div>
+                    <div class="text-sm text-on-surface-variant font-label">${s.label}</div>
+                </div>`).join('');
+        }
+        set('boat-equipment-heading', boat.equipmentHeading);
+        const eqGrid = document.getElementById('boat-equipment-grid');
+        if (eqGrid && boat.equipment) {
+            eqGrid.innerHTML = boat.equipment.map(e => `
+                <div class="bg-surface-container-low rounded-xl p-6 editorial-shadow border border-outline-variant/20">
+                    <span class="material-symbols-outlined text-5xl text-primary mb-4 block">${e.icon}</span>
+                    <h3 class="text-xl font-bold text-primary mb-2 font-headline">${e.heading}</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">${e.description}</p>
+                </div>`).join('');
+        }
     }
 
     function renderPrice(price) {
         const el = document.getElementById('price-per-person');
-        if (el) {
-            el.textContent = `${price.currency}${price.perPerson}`;
+        if (el) el.textContent = `${price.currency}${price.perPerson}`;
+    }
+
+    function renderUI(ui) {
+        if (!ui) return;
+        const set = (id, text) => { const el = document.getElementById(id); if (el && text) el.textContent = text; };
+        set('ui-price-label', ui.priceLabel);
+        set('ui-price-duration', ui.priceDuration);
+        set('ui-faq-heading', ui.faqHeading);
+        set('ui-route-distance-label', ui.routeDistanceLabel);
+        if (ui.included) {
+            const iconEl = document.getElementById('ui-included-icon');
+            if (iconEl) iconEl.textContent = ui.included.icon;
+            set('ui-included-heading', ui.included.heading);
+            const list = document.getElementById('ui-included-list');
+            if (list && ui.included.items) {
+                list.innerHTML = ui.included.items.map(item => `
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined ${item.iconColor} mt-0.5">${item.icon}</span>
+                        <div>
+                            <div class="font-medium text-on-surface">${item.title}</div>
+                            <div class="text-sm text-on-surface-variant">${item.subtitle}</div>
+                        </div>
+                    </li>`).join('');
+            }
+        }
+        if (ui.additional) {
+            const iconEl = document.getElementById('ui-additional-icon');
+            if (iconEl) iconEl.textContent = ui.additional.icon;
+            set('ui-additional-heading', ui.additional.heading);
+            const list = document.getElementById('ui-additional-list');
+            if (list && ui.additional.items) {
+                list.innerHTML = ui.additional.items.map(item => `
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined ${item.iconColor} mt-0.5">${item.icon}</span>
+                        <div>
+                            <div class="font-medium text-on-surface">${item.title}</div>
+                            <div class="text-sm text-on-surface-variant">${item.subtitle}</div>
+                        </div>
+                    </li>`).join('');
+            }
         }
     }
 
-    function renderRoute(route) {
+    function renderRoute(route, ui) {
         const totalEl = document.getElementById('route-total-distance');
         if (totalEl) {
-            totalEl.textContent = `${route.totalDistance} миль`;
+            const unit = ui && ui.distanceUnit ? ui.distanceUnit : '';
+            totalEl.textContent = unit ? `${route.totalDistance} ${unit}` : `${route.totalDistance}`;
         }
-
         const timeline = document.getElementById('route-timeline');
-        if (!timeline) {
-            return;
-        }
-
+        if (!timeline) return;
         timeline.innerHTML = route.days.map((day, index) => {
             const isLast = index === route.days.length - 1;
             const connector = isLast ? '' : '<div class="w-0.5 h-full bg-outline-variant/30 mt-4"></div>';
             const wrapperClass = isLast ? '' : 'pb-8';
-
             return `
                 <div class="flex gap-6">
                     <div class="flex flex-col items-center">
@@ -470,25 +348,19 @@
                             ${day.distance}
                         </div>
                         <h3 class="text-2xl font-bold text-primary mb-2 font-headline">${day.title}</h3>
-                        <p class="text-on-surface-variant leading-relaxed mb-4">
-                            ${day.description}
-                        </p>
+                        <p class="text-on-surface-variant leading-relaxed mb-4">${day.description}</p>
                         <div class="flex items-center gap-2 text-sm text-on-surface-variant">
                             <span class="material-symbols-outlined text-lg">schedule</span>
                             <span>${day.duration}</span>
                         </div>
                     </div>
-                </div>
-            `;
+                </div>`;
         }).join('');
     }
 
     function renderFaq(faq) {
         const list = document.getElementById('faq-list');
-        if (!list) {
-            return;
-        }
-
+        if (!list) return;
         list.innerHTML = faq.map(item => `
             <div class="bg-surface-container-low rounded-xl overflow-hidden editorial-shadow border border-outline-variant/20">
                 <button class="faq-button w-full flex items-center justify-between p-6 text-left hover:bg-surface-container-high transition-colors" aria-expanded="false">
@@ -500,36 +372,22 @@
                         ${item.answer}
                     </div>
                 </div>
-            </div>
-        `).join('');
+            </div>`).join('');
     }
 
     function renderGallery(gallery) {
         gallery.forEach(item => {
             const card = document.querySelector(`.gallery-card[data-gallery-id="${item.id}"]`);
-            if (!card) {
-                return;
-            }
-
+            if (!card) return;
             card.dataset.title = item.title;
             card.dataset.description = item.description;
             card.dataset.image = item.image;
-
             const img = card.querySelector('img');
-            if (img) {
-                img.src = item.image;
-                img.alt = item.title;
-            }
-
+            if (img) { img.src = item.image; img.alt = item.title; }
             const titleEl = card.querySelector('h3');
-            if (titleEl) {
-                titleEl.textContent = item.title;
-            }
-
+            if (titleEl) titleEl.textContent = item.title;
             const descEl = card.querySelector('p');
-            if (descEl) {
-                descEl.textContent = item.description;
-            }
+            if (descEl) descEl.textContent = item.description;
         });
     }
 

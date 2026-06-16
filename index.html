@@ -161,7 +161,7 @@
             <div class="flex items-center justify-between h-16 md:h-20">
                 <!-- Logo -->
                 <div class="text-xl md:text-2xl font-bold tracking-tighter text-primary font-headline">
-                    Sailing Croatia
+                    Sailing Mallorca
                 </div>
 
                 <!-- Desktop Navigation -->
@@ -172,11 +172,14 @@
                     <button data-tab="info" class="tab-button text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors font-label font-medium">Info</button>
                 </nav>
 
-                <!-- Share Button -->
-                <button id="shareButton" class="flex items-center gap-2 px-4 py-2 bg-primary text-on-primary rounded-full hover:bg-primary-container transition-colors" aria-label="Поделиться">
-                    <span class="material-symbols-outlined text-xl">share</span>
-                    <span class="hidden md:inline text-sm font-label font-medium">Share</span>
-                </button>
+                <!-- Language Toggle + Share -->
+                <div class="flex items-center gap-2">
+                    <button id="langToggle" class="px-3 py-2 text-xs font-bold font-label uppercase tracking-widest text-on-surface-variant border border-outline-variant/40 rounded-full hover:text-primary hover:border-primary transition-colors">EN</button>
+                    <button id="shareButton" class="flex items-center gap-2 px-4 py-2 bg-primary text-on-primary rounded-full hover:bg-primary-container transition-colors" aria-label="Share">
+                        <span class="material-symbols-outlined text-xl">share</span>
+                        <span class="hidden md:inline text-sm font-label font-medium">Share</span>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
@@ -358,101 +361,31 @@
                         <img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=1400&q=80"
                              alt="Bavaria C42"
                              class="w-full h-full object-cover">
-                        <div class="absolute top-6 right-6 bg-tertiary-fixed text-on-tertiary-fixed-variant px-4 py-2 rounded-full text-sm font-medium font-label">
-                            2023
+                        <div id="boat-year" class="absolute top-6 right-6 bg-tertiary-fixed text-on-tertiary-fixed-variant px-4 py-2 rounded-full text-sm font-medium font-label">
+                            2024
                         </div>
                     </div>
 
-                    <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-primary mb-4 font-headline">
-                        Bavaria C42
+                    <h1 id="hero-boat-name" class="text-5xl md:text-7xl font-bold tracking-tight text-primary mb-4 font-headline">
+                        Bavaria C50 Style
                     </h1>
-                    <p class="text-lg md:text-xl text-on-surface-variant max-w-2xl leading-relaxed">
-                        Современная парусная яхта премиум-класса с просторными каютами и полным оснащением для комфортного путешествия по Адриатике.
+                    <p id="hero-boat-subheading" class="text-lg md:text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+                        Современная парусная яхта премиум-класса с просторными каютами и полным оснащением для комфортного путешествия по Балеарскому морю.
                     </p>
                 </div>
 
                 <!-- Technical Specs -->
                 <div class="mb-16 md:mb-20">
-                    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-8 font-headline">Технические характеристики</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-
-                        <div class="glass-card rounded-xl p-6 editorial-shadow border border-outline-variant/20">
-                            <span class="material-symbols-outlined text-4xl text-secondary mb-3 block">straighten</span>
-                            <div class="text-3xl font-bold text-primary mb-1 font-headline">12.99m</div>
-                            <div class="text-sm text-on-surface-variant font-label">Длина</div>
-                        </div>
-
-                        <div class="glass-card rounded-xl p-6 editorial-shadow border border-outline-variant/20">
-                            <span class="material-symbols-outlined text-4xl text-secondary mb-3 block">bed</span>
-                            <div class="text-3xl font-bold text-primary mb-1 font-headline">4</div>
-                            <div class="text-sm text-on-surface-variant font-label">Каюты</div>
-                        </div>
-
-                        <div class="glass-card rounded-xl p-6 editorial-shadow border border-outline-variant/20">
-                            <span class="material-symbols-outlined text-4xl text-secondary mb-3 block">group</span>
-                            <div class="text-3xl font-bold text-primary mb-1 font-headline">8+2</div>
-                            <div class="text-sm text-on-surface-variant font-label">Места</div>
-                        </div>
-
-                        <div class="glass-card rounded-xl p-6 editorial-shadow border border-outline-variant/20">
-                            <span class="material-symbols-outlined text-4xl text-secondary mb-3 block">shower</span>
-                            <div class="text-3xl font-bold text-primary mb-1 font-headline">2</div>
-                            <div class="text-sm text-on-surface-variant font-label">WC/душ</div>
-                        </div>
-
-                    </div>
+                    <h2 id="boat-specs-heading" class="text-2xl md:text-3xl font-bold text-primary mb-8 font-headline">Технические характеристики</h2>
+                    <div id="boat-specs-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
                 </div>
 
                 <!-- Premium Equipment -->
                 <div class="mb-16 md:mb-20">
-                    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-8 font-headline">Премиум оснащение</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-                        <div class="bg-surface-container-low rounded-xl p-6 editorial-shadow border border-outline-variant/20">
-                            <span class="material-symbols-outlined text-5xl text-primary mb-4 block">navigation</span>
-                            <h3 class="text-xl font-bold text-primary mb-2 font-headline">GPS навигатор</h3>
-                            <p class="text-sm text-on-surface-variant leading-relaxed">
-                                Современная картплоттерная система с актуальными морскими картами Адриатики
-                            </p>
-                        </div>
-
-                        <div class="bg-surface-container-low rounded-xl p-6 editorial-shadow border border-outline-variant/20">
-                            <span class="material-symbols-outlined text-5xl text-primary mb-4 block">sync</span>
-                            <h3 class="text-xl font-bold text-primary mb-2 font-headline">Автопилот</h3>
-                            <p class="text-sm text-on-surface-variant leading-relaxed">
-                                Автоматическое управление курсом для комфортных переходов на длинных дистанциях
-                            </p>
-                        </div>
-
-                        <div class="bg-surface-container-low rounded-xl p-6 editorial-shadow border border-outline-variant/20">
-                            <span class="material-symbols-outlined text-5xl text-primary mb-4 block">solar_power</span>
-                            <h3 class="text-xl font-bold text-primary mb-2 font-headline">Солнечные панели</h3>
-                            <p class="text-sm text-on-surface-variant leading-relaxed">
-                                Автономное электроснабжение на якорных стоянках в уединенных бухтах
-                            </p>
-                        </div>
-
-                    </div>
+                    <h2 id="boat-equipment-heading" class="text-2xl md:text-3xl font-bold text-primary mb-8 font-headline">Премиум оснащение</h2>
+                    <div id="boat-equipment-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
                 </div>
 
-                <!-- Testimonial -->
-                <div class="bg-tertiary-fixed rounded-xl p-8 md:p-12 editorial-shadow">
-                    <div class="flex items-start gap-4 mb-6">
-                        <span class="material-symbols-outlined text-6xl text-on-tertiary-fixed-variant opacity-50">format_quote</span>
-                    </div>
-                    <p class="text-xl md:text-2xl text-on-tertiary-fixed-variant leading-relaxed mb-6 font-headline font-medium">
-                        Идеальная яхта для семейного путешествия! Просторные каюты, удобная кухня и все необходимое оборудование. Чувствовали себя как дома даже в открытом море.
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-white font-bold text-lg">
-                            АМ
-                        </div>
-                        <div>
-                            <div class="font-bold text-on-tertiary-fixed-variant font-label">Анна Михайлова</div>
-                            <div class="text-sm text-on-tertiary-fixed-variant/70">Июль 2024</div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
         </section>
@@ -487,8 +420,8 @@
                                 <div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent"></div>
                                 <div class="absolute bottom-0 left-0 right-0 p-6">
                                     <div class="bg-white/90 backdrop-blur-sm rounded-xl p-4">
-                                        <div class="text-sm text-on-surface-variant mb-2 font-label">Общая дистанция</div>
-                                        <div class="text-3xl font-bold text-primary font-headline" id="route-total-distance">158 миль</div>
+                                        <div id="ui-route-distance-label" class="text-sm text-on-surface-variant mb-2 font-label">Общая дистанция</div>
+                                        <div class="text-3xl font-bold text-primary font-headline" id="route-total-distance">122 мили</div>
                                     </div>
                                 </div>
                             </div>
@@ -516,9 +449,9 @@
                             </p>
                         </div>
                         <div class="glass-card rounded-xl p-8 md:p-10 editorial-shadow border border-outline-variant/20">
-                            <div class="text-sm text-on-surface-variant mb-2 font-label uppercase tracking-wider">Стоимость на человека</div>
+                            <div id="ui-price-label" class="text-sm text-on-surface-variant mb-2 font-label uppercase tracking-wider">Стоимость на человека</div>
                             <div class="text-6xl md:text-7xl font-bold text-primary mb-4 font-headline" id="price-per-person">€1200</div>
-                            <div class="text-on-surface-variant mb-6">7 дней / 6 ночей</div>
+                            <div id="ui-price-duration" class="text-on-surface-variant mb-6">7 дней / 6 ночей</div>
                             <a href="https://t.me/sailingcroatia"
                                target="_blank"
                                rel="noopener noreferrer"
@@ -535,80 +468,22 @@
                 <div class="mb-16 md:mb-20">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-                        <!-- What's Included -->
+                        <!-- What's Included (rendered from content.json) -->
                         <div class="bg-surface-container-low rounded-xl p-8 editorial-shadow border border-outline-variant/20">
                             <div class="flex items-center gap-3 mb-6">
-                                <span class="material-symbols-outlined text-4xl text-primary">check_circle</span>
-                                <h2 class="text-2xl font-bold text-primary font-headline">Что включено</h2>
+                                <span id="ui-included-icon" class="material-symbols-outlined text-4xl text-primary">check_circle</span>
+                                <h2 id="ui-included-heading" class="text-2xl font-bold text-primary font-headline">Что включено</h2>
                             </div>
-                            <ul class="space-y-4">
-                                <li class="flex items-start gap-3">
-                                    <span class="material-symbols-outlined text-secondary mt-0.5">sailing</span>
-                                    <div>
-                                        <div class="font-medium text-on-surface">Аренда яхты Bavaria C42</div>
-                                        <div class="text-sm text-on-surface-variant">7 дней с полным оснащением</div>
-                                    </div>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="material-symbols-outlined text-secondary mt-0.5">person</span>
-                                    <div>
-                                        <div class="font-medium text-on-surface">Профессиональный шкипер</div>
-                                        <div class="text-sm text-on-surface-variant">С лицензией и местными знаниями</div>
-                                    </div>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="material-symbols-outlined text-secondary mt-0.5">bed</span>
-                                    <div>
-                                        <div class="font-medium text-on-surface">Постельное белье и полотенца</div>
-                                        <div class="text-sm text-on-surface-variant">Смена белья раз в неделю</div>
-                                    </div>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="material-symbols-outlined text-secondary mt-0.5">local_gas_station</span>
-                                    <div>
-                                        <div class="font-medium text-on-surface">Топливо до первой марины</div>
-                                        <div class="text-sm text-on-surface-variant">Для начала путешествия</div>
-                                    </div>
-                                </li>
-                            </ul>
+                            <ul id="ui-included-list" class="space-y-4"></ul>
                         </div>
 
-                        <!-- Additional Costs -->
+                        <!-- Additional Costs (rendered from content.json) -->
                         <div class="bg-surface-container-low rounded-xl p-8 editorial-shadow border border-outline-variant/20">
                             <div class="flex items-center gap-3 mb-6">
-                                <span class="material-symbols-outlined text-4xl text-tertiary">credit_card</span>
-                                <h2 class="text-2xl font-bold text-primary font-headline">Дополнительные расходы</h2>
+                                <span id="ui-additional-icon" class="material-symbols-outlined text-4xl text-tertiary">credit_card</span>
+                                <h2 id="ui-additional-heading" class="text-2xl font-bold text-primary font-headline">Дополнительные расходы</h2>
                             </div>
-                            <ul class="space-y-4">
-                                <li class="flex items-start gap-3">
-                                    <span class="material-symbols-outlined text-on-surface-variant mt-0.5">restaurant</span>
-                                    <div>
-                                        <div class="font-medium text-on-surface">Питание</div>
-                                        <div class="text-sm text-on-surface-variant">~€30-50/день на человека</div>
-                                    </div>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="material-symbols-outlined text-on-surface-variant mt-0.5">anchor</span>
-                                    <div>
-                                        <div class="font-medium text-on-surface">Марины и стоянки</div>
-                                        <div class="text-sm text-on-surface-variant">~€20-40/ночь за яхту</div>
-                                    </div>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="material-symbols-outlined text-on-surface-variant mt-0.5">local_gas_station</span>
-                                    <div>
-                                        <div class="font-medium text-on-surface">Топливо (кроме первой марины)</div>
-                                        <div class="text-sm text-on-surface-variant">~€150-200 за неделю</div>
-                                    </div>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="material-symbols-outlined text-on-surface-variant mt-0.5">confirmation_number</span>
-                                    <div>
-                                        <div class="font-medium text-on-surface">Экскурсии</div>
-                                        <div class="text-sm text-on-surface-variant">Голубая пещера, винные туры (опционально)</div>
-                                    </div>
-                                </li>
-                            </ul>
+                            <ul id="ui-additional-list" class="space-y-4"></ul>
                         </div>
 
                     </div>
@@ -616,7 +491,7 @@
 
                 <!-- FAQ Accordion -->
                 <div class="mb-16 md:mb-20">
-                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-8 font-headline">Частые вопросы</h2>
+                    <h2 id="ui-faq-heading" class="text-3xl md:text-4xl font-bold text-primary mb-8 font-headline">Частые вопросы</h2>
                     <div class="space-y-4" id="faq-list"></div>
                 </div>
 
