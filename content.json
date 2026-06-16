@@ -139,7 +139,8 @@
           }
         ]
       },
-      "distanceUnit": "мили"
+      "distanceUnit": "мили",
+      "bookLabel": "Написать Мо"
     },
     "route": {
       "totalDistance": 122,
@@ -415,7 +416,8 @@
           }
         ]
       },
-      "distanceUnit": "nm"
+      "distanceUnit": "nm",
+      "bookLabel": "Message Mo"
     },
     "route": {
       "totalDistance": 122,

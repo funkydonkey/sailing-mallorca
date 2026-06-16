@@ -289,6 +289,9 @@
         set('ui-price-duration', ui.priceDuration);
         set('ui-faq-heading', ui.faqHeading);
         set('ui-route-distance-label', ui.routeDistanceLabel);
+        set('cta-book-label', ui.bookLabel);
+        const bookBtn = document.getElementById('cta-book');
+        if (bookBtn && ui.bookLabel) bookBtn.setAttribute('aria-label', `${ui.bookLabel} в Telegram`);
         if (ui.included) {
             const iconEl = document.getElementById('ui-included-icon');
             if (iconEl) iconEl.textContent = ui.included.icon;
