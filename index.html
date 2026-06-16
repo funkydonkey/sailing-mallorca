@@ -166,10 +166,10 @@
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-8">
-                    <button data-tab="gallery" class="tab-button text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors font-label font-medium">Gallery</button>
-                    <button data-tab="boat" class="tab-button text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors font-label font-medium">Boat</button>
-                    <button data-tab="route" class="tab-button text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors font-label font-medium">Route</button>
-                    <button data-tab="info" class="tab-button text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors font-label font-medium">Info</button>
+                    <button data-tab="gallery" class="tab-button text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors font-label font-medium"><span id="nav-label-gallery">Gallery</span></button>
+                    <button data-tab="boat" class="tab-button text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors font-label font-medium"><span id="nav-label-boat">Boat</span></button>
+                    <button data-tab="route" class="tab-button text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors font-label font-medium"><span id="nav-label-route">Route</span></button>
+                    <button data-tab="info" class="tab-button text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors font-label font-medium"><span id="nav-label-info">Info</span></button>
                 </nav>
 
                 <!-- Language Toggle + Share -->
@@ -528,21 +528,21 @@
     <!-- Bottom Tab Bar (Mobile Only) -->
     <nav class="bottom-tab-bar fixed bottom-4 left-4 right-4 md:hidden z-40">
         <div class="bg-white/80 backdrop-blur-xl rounded-full px-6 py-4 editorial-shadow flex items-center justify-around border border-outline-variant/20">
-            <button data-tab="gallery" class="mobile-tab-button flex flex-col items-center gap-1 px-4 py-2 rounded-xl transition-all" aria-label="Галерея">
+            <button data-tab="gallery" class="mobile-tab-button flex flex-col items-center gap-1 px-4 py-2 rounded-xl transition-all" aria-label="Gallery">
                 <span class="material-symbols-outlined text-2xl">photo_library</span>
-                <span class="text-xs font-label font-medium">Gallery</span>
+                <span id="mob-label-gallery" class="text-xs font-label font-medium">Gallery</span>
             </button>
-            <button data-tab="boat" class="mobile-tab-button flex flex-col items-center gap-1 px-4 py-2 rounded-xl transition-all" aria-label="Лодка">
+            <button data-tab="boat" class="mobile-tab-button flex flex-col items-center gap-1 px-4 py-2 rounded-xl transition-all" aria-label="Boat">
                 <span class="material-symbols-outlined text-2xl">directions_boat</span>
-                <span class="text-xs font-label font-medium">Boat</span>
+                <span id="mob-label-boat" class="text-xs font-label font-medium">Boat</span>
             </button>
-            <button data-tab="route" class="mobile-tab-button flex flex-col items-center gap-1 px-4 py-2 rounded-xl transition-all" aria-label="Маршрут">
+            <button data-tab="route" class="mobile-tab-button flex flex-col items-center gap-1 px-4 py-2 rounded-xl transition-all" aria-label="Route">
                 <span class="material-symbols-outlined text-2xl">map</span>
-                <span class="text-xs font-label font-medium">Route</span>
+                <span id="mob-label-route" class="text-xs font-label font-medium">Route</span>
             </button>
-            <button data-tab="info" class="mobile-tab-button flex flex-col items-center gap-1 px-4 py-2 rounded-xl transition-all" aria-label="Инфо">
+            <button data-tab="info" class="mobile-tab-button flex flex-col items-center gap-1 px-4 py-2 rounded-xl transition-all" aria-label="Info">
                 <span class="material-symbols-outlined text-2xl">info</span>
-                <span class="text-xs font-label font-medium">Info</span>
+                <span id="mob-label-info" class="text-xs font-label font-medium">Info</span>
             </button>
         </div>
     </nav>

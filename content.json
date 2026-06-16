@@ -10,7 +10,7 @@
     },
     "tabs": {
       "gallery": {
-        "heading": "Balearic<br>Azure",
+        "heading": "Балеарская<br>Лазурь",
         "subheading": "Откройте для себя скрытые жемчужины Майорки — от драматичных скал Кала-Пи до белоснежных пляжей Эс-Тренк."
       },
       "boat": {
@@ -60,12 +60,18 @@
         ]
       },
       "route": {
-        "heading": "The Balearic<br>Odyssey",
+        "heading": "Балеарская<br>Одиссея",
         "subheading": "Семидневный маршрут по живописному побережью Майорки. 122 морские мили удовольствия."
       },
       "info": {
-        "heading": "Your Balearic<br>Adventure",
+        "heading": "Ваше Балеарское<br>Приключение",
         "subheading": "В стоимость включено: аренда яхты, свой капитан, марины, постельное бельё и топливо. Перелёт и питание оплачиваются отдельно."
+      },
+      "nav": {
+        "gallery": "Галерея",
+        "boat": "Яхта",
+        "route": "Маршрут",
+        "info": "Инфо"
       }
     },
     "price": {
@@ -343,6 +349,12 @@
       "info": {
         "heading": "Your Balearic<br>Adventure",
         "subheading": "Everything included: yacht charter, our own skipper, marina fees, bed linen and fuel. Flights and food are paid separately."
+      },
+      "nav": {
+        "gallery": "Gallery",
+        "boat": "Boat",
+        "route": "Route",
+        "info": "Info"
       }
     },
     "price": {

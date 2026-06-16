@@ -14,6 +14,7 @@
         if (!_content) return;
         const data = _content[lang] || _content['ru'];
         renderMeta(data.meta);
+        renderNav(data.tabs.nav);
         renderHeadings(data.tabs);
         renderBoat(data.tabs.boat);
         renderPrice(data.price);
@@ -22,6 +23,20 @@
         renderFaq(data.faq);
         renderGallery(data.gallery);
         updateLangToggle(lang);
+    }
+
+    function renderNav(nav) {
+        if (!nav) return;
+        ['gallery', 'boat', 'route', 'info'].forEach(tab => {
+            if (!nav[tab]) return;
+            const desktop = document.getElementById(`nav-label-${tab}`);
+            if (desktop) desktop.textContent = nav[tab];
+            const mobile = document.getElementById(`mob-label-${tab}`);
+            if (mobile) mobile.textContent = nav[tab];
+            document.querySelectorAll(`.mobile-tab-button[data-tab="${tab}"]`).forEach(btn => {
+                btn.setAttribute('aria-label', nav[tab]);
+            });
+        });
     }
 
     function initApp() {
