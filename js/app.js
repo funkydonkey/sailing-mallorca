@@ -12,7 +12,6 @@
         const tabButtons = document.querySelectorAll('.tab-button');
         const mobileTabButtons = document.querySelectorAll('.mobile-tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
-        const whatsappCTA = document.getElementById('whatsappCTA');
 
         function switchTab(tabId) {
             // Скрыть все табы
@@ -45,15 +44,6 @@
                     btn.classList.remove('bg-blue-50', 'text-blue-800', 'scale-110');
                 }
             });
-
-            // Показать/скрыть WhatsApp CTA (только на Info табе)
-            if (whatsappCTA) {
-                if (tabId === 'info') {
-                    whatsappCTA.classList.remove('hidden');
-                } else {
-                    whatsappCTA.classList.add('hidden');
-                }
-            }
 
             // Прокрутить страницу вверх
             window.scrollTo({
@@ -387,6 +377,8 @@
                 throw new Error(`HTTP ${response.status}`);
             }
             const content = await response.json();
+            renderMeta(content.meta);
+            renderHeadings(content.tabs);
             renderPrice(content.price);
             renderRoute(content.route);
             renderFaq(content.faq);
@@ -394,6 +386,52 @@
         } catch (error) {
             console.warn('content.json not loaded, using static fallback content:', error);
         }
+    }
+
+    function renderMeta(meta) {
+        if (!meta) {
+            return;
+        }
+        if (meta.pageTitle) {
+            document.title = meta.pageTitle;
+        }
+        if (meta.description) {
+            const el = document.querySelector('meta[name="description"]');
+            if (el) el.setAttribute('content', meta.description);
+        }
+        if (meta.ogTitle) {
+            document.querySelector('meta[property="og:title"]')?.setAttribute('content', meta.ogTitle);
+            document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', meta.ogTitle);
+        }
+        if (meta.ogDescription) {
+            document.querySelector('meta[property="og:description"]')?.setAttribute('content', meta.ogDescription);
+            document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', meta.ogDescription);
+        }
+        if (meta.ogUrl) {
+            document.querySelector('meta[property="og:url"]')?.setAttribute('content', meta.ogUrl);
+        }
+        if (meta.appleTitle) {
+            document.querySelector('meta[name="apple-mobile-web-app-title"]')?.setAttribute('content', meta.appleTitle);
+        }
+    }
+
+    function renderHeadings(tabs) {
+        if (!tabs) {
+            return;
+        }
+        ['gallery', 'route', 'info'].forEach(tab => {
+            if (!tabs[tab]) {
+                return;
+            }
+            const h1 = document.getElementById(`hero-${tab}-heading`);
+            if (h1 && tabs[tab].heading) {
+                h1.innerHTML = tabs[tab].heading;
+            }
+            const p = document.getElementById(`hero-${tab}-subheading`);
+            if (p && tabs[tab].subheading) {
+                p.textContent = tabs[tab].subheading;
+            }
+        });
     }
 
     function renderPrice(price) {

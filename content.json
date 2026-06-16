@@ -1,4 +1,26 @@
 {
+  "meta": {
+    "pageTitle": "Sailing Croatia — Adriatic Azure",
+    "description": "Sailing Croatia — парусное приключение по Адриатическому морю. Откройте для себя Хвар, Корчулу, Голубую пещеру и другие жемчужины Хорватии.",
+    "ogTitle": "Парусное приключение по Хорватии 🌊⛵",
+    "ogDescription": "Неделя под парусом: Дубровник, Хвар, Корчула, Млет. Bavaria C42, опытный шкипер, до 8 человек. Острова, ветер и бирюзовое море Адриатики.",
+    "ogUrl": "https://funkydonkey.github.io/sailing-mallorca/",
+    "appleTitle": "Sailing Adventure"
+  },
+  "tabs": {
+    "gallery": {
+      "heading": "Adriatic<br>Azure",
+      "subheading": "Откройте для себя скрытые жемчужины Адриатики — от лавандовых полей Хвара до светящихся вод Голубой пещеры."
+    },
+    "route": {
+      "heading": "The Adriatic<br>Odyssey",
+      "subheading": "Семидневный маршрут по самым живописным островам и бухтам хорватского побережья. 158 морских миль чистого удовольствия."
+    },
+    "info": {
+      "heading": "Your Adriatic<br>Adventure",
+      "subheading": "Все включено для комфортного путешествия: аренда яхты, шкипер, постельное белье, топливо для перехода в первую марину."
+    }
+  },
   "price": {
     "perPerson": 1200,
     "currency": "€"
