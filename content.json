@@ -65,11 +65,11 @@
       },
       "info": {
         "heading": "Your Balearic<br>Adventure",
-        "subheading": "Все включено для комфортного путешествия: аренда яхты, шкипер, постельное белье, топливо для перехода в первую марину."
+        "subheading": "В стоимость включено: аренда яхты, свой капитан, марины, постельное бельё и топливо. Перелёт и питание оплачиваются отдельно."
       }
     },
     "price": {
-      "perPerson": 1200,
+      "perPerson": 1040,
       "currency": "€"
     },
     "ui": {
@@ -91,20 +91,26 @@
           {
             "icon": "person",
             "iconColor": "text-secondary",
-            "title": "Профессиональный шкипер",
-            "subtitle": "С лицензией и знанием местных вод"
+            "title": "Свой опытный капитан",
+            "subtitle": "Со знанием местных вод"
+          },
+          {
+            "icon": "anchor",
+            "iconColor": "text-secondary",
+            "title": "Стоянки в маринах",
+            "subtitle": "На протяжении всего маршрута"
           },
           {
             "icon": "bed",
             "iconColor": "text-secondary",
             "title": "Постельное белье и полотенца",
-            "subtitle": "Смена белья раз в неделю"
+            "subtitle": "Комплект на каждого"
           },
           {
             "icon": "local_gas_station",
             "iconColor": "text-secondary",
-            "title": "Топливо до первой марины",
-            "subtitle": "Для начала путешествия"
+            "title": "Топливо",
+            "subtitle": "Для всех переходов"
           }
         ]
       },
@@ -114,22 +120,16 @@
         "iconColor": "text-tertiary",
         "items": [
           {
+            "icon": "flight",
+            "iconColor": "text-on-surface-variant",
+            "title": "Перелёт до Пальмы",
+            "subtitle": "~€80-150 туда-обратно из Европы"
+          },
+          {
             "icon": "restaurant",
             "iconColor": "text-on-surface-variant",
             "title": "Питание",
-            "subtitle": "~€30-50/день на человека"
-          },
-          {
-            "icon": "anchor",
-            "iconColor": "text-on-surface-variant",
-            "title": "Марины и стоянки",
-            "subtitle": "~€20-40/ночь за яхту"
-          },
-          {
-            "icon": "local_gas_station",
-            "iconColor": "text-on-surface-variant",
-            "title": "Топливо",
-            "subtitle": "~€150-200 за неделю"
+            "subtitle": "~€300 на человека за неделю"
           },
           {
             "icon": "tour",
@@ -214,6 +214,10 @@
       {
         "question": "Какая погода в октябре? Не холодно ли?",
         "answer": "Начало октября на Майорке — мягкое бабье лето: днём +22-25°C, вода ещё тёплая, около +23°C, можно купаться. Ветра лёгкие и предсказуемые, юго-западный берег закрыт от волны. Вечерами прохладнее (~16°C), поэтому на яхте есть отопление. Идеальное время для спокойного похода без толп туристов."
+      },
+      {
+        "question": "Что входит в стоимость, а что нет?",
+        "answer": "В €1040 с человека входит аренда новой яхты Bavaria C50, свой капитан, стоянки в маринах, постельное бельё, полотенца и топливо. Отдельно оплачиваются перелёт до Пальмы (~€80-150 туда-обратно из Европы) и общий бюджет на еду и напитки (~€300 с человека за неделю)."
       },
       {
         "question": "Нужна ли виза?",
@@ -337,11 +341,11 @@
       },
       "info": {
         "heading": "Your Balearic<br>Adventure",
-        "subheading": "Everything included for a comfortable journey: yacht charter, skipper, bed linen, fuel for the first marina."
+        "subheading": "Everything included: yacht charter, our own skipper, marina fees, bed linen and fuel. Flights and food are paid separately."
       }
     },
     "price": {
-      "perPerson": 1200,
+      "perPerson": 1040,
       "currency": "€"
     },
     "ui": {
@@ -363,20 +367,26 @@
           {
             "icon": "person",
             "iconColor": "text-secondary",
-            "title": "Professional Skipper",
-            "subtitle": "Licensed with local knowledge"
+            "title": "Our Own Experienced Skipper",
+            "subtitle": "With local knowledge"
+          },
+          {
+            "icon": "anchor",
+            "iconColor": "text-secondary",
+            "title": "Marina Fees",
+            "subtitle": "Throughout the whole route"
           },
           {
             "icon": "bed",
             "iconColor": "text-secondary",
             "title": "Bed Linen & Towels",
-            "subtitle": "Fresh linen once a week"
+            "subtitle": "One set per person"
           },
           {
             "icon": "local_gas_station",
             "iconColor": "text-secondary",
-            "title": "Fuel to First Marina",
-            "subtitle": "For the start of the journey"
+            "title": "Fuel",
+            "subtitle": "For all passages"
           }
         ]
       },
@@ -386,22 +396,16 @@
         "iconColor": "text-tertiary",
         "items": [
           {
+            "icon": "flight",
+            "iconColor": "text-on-surface-variant",
+            "title": "Flights to Palma",
+            "subtitle": "~€80-150 round trip from Europe"
+          },
+          {
             "icon": "restaurant",
             "iconColor": "text-on-surface-variant",
             "title": "Food & Drinks",
-            "subtitle": "~€30-50/day per person"
-          },
-          {
-            "icon": "anchor",
-            "iconColor": "text-on-surface-variant",
-            "title": "Marina Fees",
-            "subtitle": "~€20-40/night for the yacht"
-          },
-          {
-            "icon": "local_gas_station",
-            "iconColor": "text-on-surface-variant",
-            "title": "Fuel",
-            "subtitle": "~€150-200 per week"
+            "subtitle": "~€300 per person for the week"
           },
           {
             "icon": "tour",
@@ -486,6 +490,10 @@
       {
         "question": "What's the weather like in October? Is it cold?",
         "answer": "Early October in Mallorca is a warm Indian summer: daytime temperatures +22-25°C, sea water still warm at around +23°C — perfect for swimming. Winds are light and predictable, the southwest coast is sheltered from waves. Evenings are cooler (~16°C), but the yacht has heating. The ideal time for a relaxed cruise without crowds."
+      },
+      {
+        "question": "What's included in the price, and what's not?",
+        "answer": "The €1040 per person covers the brand-new Bavaria C50 yacht charter, our own skipper, marina fees, bed linen, towels and fuel. Flights to Palma (~€80-150 round trip from Europe) and a shared food & drinks budget (~€300 per person for the week) are paid separately."
       },
       {
         "question": "Do I need a visa?",
