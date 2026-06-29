@@ -14,48 +14,48 @@
         "subheading": "Коста-Смеральда, архипелаг Маддалена, пролив Бонифачо — одни из самых красивых вод Средиземноморья."
       },
       "boat": {
-        "name": "Bavaria C50 Style",
-        "year": "2024",
-        "subheading": "Современная парусная яхта премиум-класса с просторными каютами и полным оснащением для комфортного путешествия по Сардинии и Корсике.",
+        "name": "Beneteau Oceanis 46.1",
+        "year": "2023",
+        "subheading": "Современная 4-каютная яхта 2023 года постройки. 14.6 м длины, кондиционер, кофемашина, платформа для купания — всё для комфортного недельного плавания.",
         "specsHeading": "Технические характеристики",
         "specs": [
           {
             "icon": "straighten",
-            "value": "15.0m",
+            "value": "14.6 m",
             "label": "Длина"
           },
           {
             "icon": "bed",
-            "value": "4+1",
+            "value": "4",
             "label": "Каюты"
           },
           {
             "icon": "group",
-            "value": "8+2",
-            "label": "Места"
+            "value": "8 + 2",
+            "label": "Спальных мест"
           },
           {
             "icon": "shower",
-            "value": "3",
-            "label": "WC/душ"
+            "value": "2",
+            "label": "Туалетов с душем"
           }
         ],
-        "equipmentHeading": "Премиум оснащение",
+        "equipmentHeading": "Оснащение на борту",
         "equipment": [
           {
             "icon": "navigation",
-            "heading": "GPS навигатор",
-            "description": "Современная картплоттерная система с актуальными морскими картами Балеарских островов"
+            "heading": "Навигация",
+            "description": "Внешний GPS картплоттер, автопилот, подруливающее устройство — полный набор для уверенного судовождения"
           },
           {
-            "icon": "sync",
-            "heading": "Автопилот",
-            "description": "Автоматическое управление курсом для комфортных переходов на длинных дистанциях"
+            "icon": "ac_unit",
+            "heading": "Комфорт",
+            "description": "Кондиционер, кофемашина, духовка, холодильник, полотенца и постельное бельё — всё включено"
           },
           {
-            "icon": "solar_power",
-            "heading": "Солнечные панели",
-            "description": "Автономное электроснабжение на якорных стоянках в уединённых бухтах"
+            "icon": "pool",
+            "heading": "Отдых на воде",
+            "description": "Платформа для купания, надувная шлюпка, бимини-тент, наружные динамики, телевизор"
           }
         ]
       },
@@ -91,7 +91,7 @@
           {
             "icon": "sailing",
             "iconColor": "text-secondary",
-            "title": "Аренда яхты Bavaria C50 Style",
+            "title": "Аренда яхты Beneteau Oceanis 46.1",
             "subtitle": "8 дней с полным оснащением"
           },
           {
@@ -238,51 +238,51 @@
     "gallery": [
       {
         "id": 1,
-        "title": "Коста-Смеральда",
-        "description": "Изумрудные воды и белые яхты Порто-Черво",
-        "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
+        "title": "Порто-Черво, Коста-Смеральда",
+        "description": "Изумрудные воды и белые яхты самой гламурной марины Сардинии",
+        "image": "https://images.unsplash.com/photo-1601621915196-2621bfb0cd6e?w=1200&q=85"
       },
       {
         "id": 2,
         "title": "Архипелаг Маддалена",
-        "description": "15 островов бирюзовой воды в национальном парке",
-        "image": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=800&q=80"
+        "description": "15 островов бирюзовой воды в национальном парке Сардинии",
+        "image": "https://images.unsplash.com/photo-1559571509-1b5c9241070b?w=1200&q=85"
       },
       {
         "id": 3,
-        "title": "Пролив Бонифачо",
-        "description": "Самое узкое место между Сардинией и Корсикой",
-        "image": "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=800&q=80"
+        "title": "Бонифачо, Корсика",
+        "description": "Средневековая цитадель на белых известняковых скалах над узким фьордом",
+        "image": "https://images.unsplash.com/photo-1687469043863-4593a52737fe?w=1200&q=85"
       },
       {
         "id": 4,
-        "title": "Бонифачо",
-        "description": "Средневековая цитадель на белых известняковых скалах",
-        "image": "https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80"
+        "title": "Пролив Бонифачо",
+        "description": "Между Сардинией и Корсикой — самое оживлённое место Средиземноморья",
+        "image": "https://images.unsplash.com/photo-1503803548695-c2a7b4a5b875?w=1200&q=85"
       },
       {
         "id": 5,
-        "title": "О. Лавецци",
-        "description": "Морской заповедник в сердце пролива, гранитные глыбы и прозрачная вода",
-        "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80"
+        "title": "Острова Буделли и Санта-Мария",
+        "description": "Природные бассейны архипелага — бирюза и белый песок",
+        "image": "https://images.unsplash.com/photo-1574202257847-2692a9f237fa?w=1200&q=85"
       },
       {
         "id": 6,
-        "title": "Буделли — природные бассейны",
-        "description": "Бирюза и белый песок, Розовый пляж смотреть с воды",
-        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"
+        "title": "Beneteau Oceanis 46.1 — Persefone",
+        "description": "Наша яхта 2023 года постройки, марина Ольбия",
+        "image": "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=1200&q=85"
       },
       {
         "id": 7,
-        "title": "Bavaria C50 Style",
-        "description": "Наша яхта — 15 метров комфорта и скорости",
-        "image": "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800&q=80"
+        "title": "Ла-Маддалена",
+        "description": "Главный город архипелага — рестораны, провизия, закат с набережной",
+        "image": "https://images.unsplash.com/photo-1508928310938-32045c51ef6f?w=1200&q=85"
       },
       {
         "id": 8,
         "title": "Закат над Сардинией",
         "description": "Каждый вечер — другой горизонт",
-        "image": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80"
+        "image": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=1200&q=85"
       }
     ]
   },
@@ -301,48 +301,48 @@
         "subheading": "Costa Smeralda, Maddalena archipelago, Strait of Bonifacio — some of the most stunning waters in the Mediterranean."
       },
       "boat": {
-        "name": "Bavaria C50 Style",
-        "year": "2024",
-        "subheading": "A modern premium sailing yacht with spacious cabins and full equipment for a comfortable voyage around Sardinia and Corsica.",
+        "name": "Beneteau Oceanis 46.1",
+        "year": "2023",
+        "subheading": "Modern 4-cabin yacht built in 2023. 14.6 m length, A/C, coffee machine, swim platform — everything for a comfortable week at sea.",
         "specsHeading": "Technical Specifications",
         "specs": [
           {
             "icon": "straighten",
-            "value": "15.0m",
+            "value": "14.6 m",
             "label": "Length"
           },
           {
             "icon": "bed",
-            "value": "4+1",
+            "value": "4",
             "label": "Cabins"
           },
           {
             "icon": "group",
-            "value": "8+2",
-            "label": "Capacity"
+            "value": "8 + 2",
+            "label": "Berths"
           },
           {
             "icon": "shower",
-            "value": "3",
-            "label": "WC/Shower"
+            "value": "2",
+            "label": "Heads"
           }
         ],
-        "equipmentHeading": "Premium Equipment",
+        "equipmentHeading": "On-board Equipment",
         "equipment": [
           {
             "icon": "navigation",
-            "heading": "GPS Chart Plotter",
-            "description": "Modern chart plotter system with up-to-date nautical charts of the Balearic Islands"
+            "heading": "Navigation",
+            "description": "External GPS chartplotter, autopilot, bow thruster — a complete set for confident sailing"
           },
           {
-            "icon": "sync",
-            "heading": "Autopilot",
-            "description": "Automatic course control for comfortable long-distance passages"
+            "icon": "ac_unit",
+            "heading": "Comfort",
+            "description": "A/C, coffee machine, oven, fridge, towels and bedding — all included"
           },
           {
-            "icon": "solar_power",
-            "heading": "Solar Panels",
-            "description": "Autonomous power supply at anchor in secluded bays"
+            "icon": "pool",
+            "heading": "Water fun",
+            "description": "Swim platform, inflatable dinghy, Bimini, external speakers, flat screen TV"
           }
         ]
       },
@@ -378,7 +378,7 @@
           {
             "icon": "sailing",
             "iconColor": "text-secondary",
-            "title": "Bavaria C50 Style Yacht Charter",
+            "title": "Beneteau Oceanis 46.1 charter",
             "subtitle": "8 days fully equipped"
           },
           {
@@ -525,51 +525,51 @@
     "gallery": [
       {
         "id": 1,
-        "title": "Costa Smeralda",
-        "description": "Emerald waters and white yachts of Porto Cervo",
-        "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
+        "title": "Porto Cervo, Costa Smeralda",
+        "description": "Emerald waters and white yachts of Sardinia's most glamorous marina",
+        "image": "https://images.unsplash.com/photo-1601621915196-2621bfb0cd6e?w=1200&q=85"
       },
       {
         "id": 2,
         "title": "Maddalena Archipelago",
-        "description": "15 islands of turquoise water in the national park",
-        "image": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=800&q=80"
+        "description": "15 islands of turquoise water in Sardinia's national park",
+        "image": "https://images.unsplash.com/photo-1559571509-1b5c9241070b?w=1200&q=85"
       },
       {
         "id": 3,
-        "title": "Strait of Bonifacio",
-        "description": "The narrowest point between Sardinia and Corsica",
-        "image": "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=800&q=80"
+        "title": "Bonifacio, Corsica",
+        "description": "Medieval citadel on white limestone cliffs above a narrow fjord",
+        "image": "https://images.unsplash.com/photo-1687469043863-4593a52737fe?w=1200&q=85"
       },
       {
         "id": 4,
-        "title": "Bonifacio",
-        "description": "Medieval citadel on white limestone cliffs",
-        "image": "https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80"
+        "title": "Strait of Bonifacio",
+        "description": "Between Sardinia and Corsica — one of the Mediterranean's busiest straits",
+        "image": "https://images.unsplash.com/photo-1503803548695-c2a7b4a5b875?w=1200&q=85"
       },
       {
         "id": 5,
-        "title": "Lavezzi Island",
-        "description": "Marine reserve in the heart of the strait — granite boulders and crystal water",
-        "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80"
+        "title": "Budelli & Santa Maria Islands",
+        "description": "Natural pools of the archipelago — turquoise and white sand",
+        "image": "https://images.unsplash.com/photo-1574202257847-2692a9f237fa?w=1200&q=85"
       },
       {
         "id": 6,
-        "title": "Budelli — Natural Pools",
-        "description": "Turquoise and white sand; admire the Pink Beach from the water",
-        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"
+        "title": "Beneteau Oceanis 46.1 — Persefone",
+        "description": "Our 2023 yacht, Olbia marina",
+        "image": "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=1200&q=85"
       },
       {
         "id": 7,
-        "title": "Bavaria C50 Style",
-        "description": "Our yacht — 15 metres of comfort and speed",
-        "image": "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800&q=80"
+        "title": "La Maddalena",
+        "description": "Archipelago's main town — restaurants, provisioning, sunset from the waterfront",
+        "image": "https://images.unsplash.com/photo-1508928310938-32045c51ef6f?w=1200&q=85"
       },
       {
         "id": 8,
         "title": "Sardinian Sunset",
         "description": "Every evening — a different horizon",
-        "image": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80"
+        "image": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=1200&q=85"
       }
     ]
   }
