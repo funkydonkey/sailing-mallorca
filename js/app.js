@@ -58,10 +58,13 @@
             });
             window.scrollTo({ top: 0, behavior: 'smooth' });
             if (tabId === 'route') {
-                setTimeout(() => {
-                    if (_routeMap) _routeMap.invalidateSize();
-                    else initRouteMap();
-                }, 50);
+                // double-rAF ensures display:none→block reflow is done before Leaflet reads container size
+                requestAnimationFrame(() => requestAnimationFrame(() => {
+                    if (!_routeMap) initRouteMap();
+                    else _routeMap.invalidateSize();
+                }));
+                // fallback for slow mobile renderers
+                setTimeout(() => { if (_routeMap) _routeMap.invalidateSize(); }, 400);
             }
         }
         tabButtons.forEach(b => b.addEventListener('click', function() { switchTab(this.dataset.tab); }));
