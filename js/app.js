@@ -3,6 +3,7 @@
     'use strict';
 
     let _content = null;
+    let _routeMap = null;
 
     function getLang() { return localStorage.getItem('lang') || 'ru'; }
     function setLang(lang) { localStorage.setItem('lang', lang); document.documentElement.lang = lang; }
@@ -56,6 +57,12 @@
                 else btn.classList.remove('bg-blue-50','text-blue-800','scale-110');
             });
             window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (tabId === 'route') {
+                setTimeout(() => {
+                    if (_routeMap) _routeMap.invalidateSize();
+                    else initRouteMap();
+                }, 50);
+            }
         }
         tabButtons.forEach(b => b.addEventListener('click', function() { switchTab(this.dataset.tab); }));
         mobileTabButtons.forEach(b => b.addEventListener('click', function() { switchTab(this.dataset.tab); }));
@@ -198,6 +205,64 @@
         }
 
         console.log('Maritime Minimalism - Sailing Mallorca initialized');
+    }
+
+    function initRouteMap() {
+        if (!window.L || _routeMap) return;
+        _routeMap = L.map('route-map', {
+            scrollWheelZoom: false,
+            attributionControl: true,
+            zoomControl: true
+        }).setView([41.2, 9.38], 8);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 16,
+            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(_routeMap);
+
+        // Outbound: Olbia → Porto Cervo → Cannigione → La Maddalena → Lavezzi → Bonifacio
+        const outbound = [
+            [40.921, 9.521],
+            [41.131, 9.542],
+            [41.142, 9.417],
+            [41.213, 9.406],
+            [41.334, 9.267],
+            [41.387, 9.159]
+        ];
+        // Return: Bonifacio → Budelli → Cannigione → Olbia
+        const returnLeg = [
+            [41.387, 9.159],
+            [41.294, 9.354],
+            [41.142, 9.417],
+            [40.921, 9.521]
+        ];
+
+        L.polyline(outbound, { color: '#001e40', weight: 3, opacity: 0.85 }).addTo(_routeMap);
+        L.polyline(returnLeg, { color: '#001e40', weight: 2, opacity: 0.55, dashArray: '8 6' }).addTo(_routeMap);
+
+        const stops = [
+            { coord: [40.921, 9.521], label: 'Ольбия', en: 'Olbia', sub: 'Старт / Финиш' },
+            { coord: [41.131, 9.542], label: 'Порто-Черво', en: 'Porto Cervo', sub: 'Коста-Смеральда' },
+            { coord: [41.142, 9.417], label: 'Каннигионе', en: 'Cannigione', sub: 'Залив Арцакена' },
+            { coord: [41.213, 9.406], label: 'Ла-Маддалена', en: 'La Maddalena', sub: 'Архипелаг' },
+            { coord: [41.334, 9.267], label: 'О. Лавецци', en: 'Lavezzi', sub: 'Купание' },
+            { coord: [41.387, 9.159], label: 'Бонифачо', en: 'Bonifacio', sub: 'Корсика 🇫🇷' },
+            { coord: [41.294, 9.354], label: 'Буделли', en: 'Budelli', sub: 'Природные бассейны' },
+        ];
+
+        stops.forEach((s, i) => {
+            const isMain = i === 0 || i === 5;
+            const size = isMain ? 36 : 28;
+            const icon = L.divIcon({
+                className: '',
+                html: `<div style="background:${isMain ? '#001e40' : '#1a5276'};color:white;border-radius:50%;width:${size}px;height:${size}px;display:flex;align-items:center;justify-content:center;font-size:${isMain ? 11 : 9}px;font-weight:700;font-family:system-ui,sans-serif;box-shadow:0 2px 8px rgba(0,30,64,0.4);border:2px solid white;">${i + 1}</div>`,
+                iconSize: [size, size],
+                iconAnchor: [size / 2, size / 2]
+            });
+            L.marker(s.coord, { icon })
+                .addTo(_routeMap)
+                .bindPopup(`<strong style="font-size:13px">${s.label}</strong><br><span style="color:#666;font-size:11px">${s.sub}</span>`);
+        });
     }
 
     // bindFaq is separate so it can be re-called after renderFaq replaces DOM on lang switch
