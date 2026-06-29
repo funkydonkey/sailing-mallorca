@@ -1,22 +1,22 @@
 {
   "ru": {
     "meta": {
-      "pageTitle": "Sailing Mallorca — Balearic Azure",
-      "description": "Sailing Mallorca — парусное приключение на Балеарских островах. Откройте для себя Кала-Пи, Эс-Тренк, Порт-д'Андратч и другие жемчужины Майорки.",
-      "ogTitle": "Парусное приключение по Майорке 🌊⛵",
-      "ogDescription": "Неделя под парусом: Пальма, Порт-д'Андратч, Эс-Тренк, Кала-Пи. Bavaria C50 Style, опытный шкипер, до 8 человек. Острова, ветер и синее Балеарское море.",
+      "pageTitle": "Sailing Sardinia — Сардиния & Корсика",
+      "description": "Парусное путешествие Сардиния → Корсика → Сардиния. Ольбия, Порто-Черво, Ла-Маддалена, Бонифачо. Октябрь 2026, Bavaria C50 Style.",
+      "ogTitle": "Сардиния → Корсика под парусом ⛵🌊",
+      "ogDescription": "7 ночей: Ольбия, Коста-Смеральда, архипелаг Маддалена, пролив Бонифачо, средневековая Корсика. Bavaria C50 Style, опытный капитан, до 9 человек.",
       "ogUrl": "https://funkydonkey.github.io/sailing-mallorca/",
-      "appleTitle": "Sailing Mallorca"
+      "appleTitle": "Sailing Sardinia"
     },
     "tabs": {
       "gallery": {
-        "heading": "Балеарская<br>Лазурь",
-        "subheading": "Откройте для себя скрытые жемчужины Майорки — от драматичных скал Кала-Пи до белоснежных пляжей Эс-Тренк."
+        "heading": "Сардиния<br>& Корсика",
+        "subheading": "Коста-Смеральда, архипелаг Маддалена, пролив Бонифачо — одни из самых красивых вод Средиземноморья."
       },
       "boat": {
         "name": "Bavaria C50 Style",
         "year": "2024",
-        "subheading": "Современная парусная яхта премиум-класса с просторными каютами и полным оснащением для комфортного путешествия по Балеарскому морю.",
+        "subheading": "Современная парусная яхта премиум-класса с просторными каютами и полным оснащением для комфортного путешествия по Сардинии и Корсике.",
         "specsHeading": "Технические характеристики",
         "specs": [
           {
@@ -60,11 +60,11 @@
         ]
       },
       "route": {
-        "heading": "Балеарская<br>Одиссея",
-        "subheading": "Семидневный маршрут по живописному побережью Майорки. 122 морские мили удовольствия."
+        "heading": "Сардиния<br>→ Корсика",
+        "subheading": "8 дней вдоль северной Сардинии до средневекового Бонифачо и обратно. ~122 морские мили."
       },
       "info": {
-        "heading": "Ваше Балеарское<br>Приключение",
+        "heading": "Ваше<br>Средиземноморье",
         "subheading": "В стоимость включено: аренда яхты, свой капитан, марины, постельное бельё и топливо. Перелёт и питание оплачиваются отдельно."
       },
       "nav": {
@@ -80,7 +80,7 @@
     },
     "ui": {
       "priceLabel": "Стоимость на человека",
-      "priceDuration": "7 дней / 6 ночей",
+      "priceDuration": "7 ночей / 8 дней",
       "faqHeading": "Частые вопросы",
       "routeDistanceLabel": "Общая дистанция",
       "included": {
@@ -92,7 +92,7 @@
             "icon": "sailing",
             "iconColor": "text-secondary",
             "title": "Аренда яхты Bavaria C50 Style",
-            "subtitle": "7 дней с полным оснащением"
+            "subtitle": "8 дней с полным оснащением"
           },
           {
             "icon": "person",
@@ -128,8 +128,8 @@
           {
             "icon": "flight",
             "iconColor": "text-on-surface-variant",
-            "title": "Перелёт до Пальмы",
-            "subtitle": "~€80-150 туда-обратно из Европы"
+            "title": "Перелёт до Ольбии",
+            "subtitle": "~€100–200 туда-обратно из Европы"
           },
           {
             "icon": "restaurant",
@@ -141,7 +141,7 @@
             "icon": "tour",
             "iconColor": "text-on-surface-variant",
             "title": "Экскурсии",
-            "subtitle": "Пещеры Арта, Cap de Formentor (опционально)"
+            "subtitle": "Крепость Бонифачо, архипелаг Маддалена (опционально)"
           }
         ]
       },
@@ -152,154 +152,158 @@
       "totalDistance": 122,
       "days": [
         {
-          "number": "01",
+          "number": "Сб",
           "color": "primary",
-          "distance": "20 миль",
-          "title": "Пальма — Порт-д'Андратч",
-          "description": "Старт из марины Пальма-де-Майорка. Знакомство с яхтой и командой, брифинг по безопасности. Переход вдоль юго-западного берега через бухту Санта-Понса в уютный Порт-д'Андратч.",
-          "duration": "~4 часа в пути"
+          "distance": "— посадка",
+          "title": "Ольбия — посадка",
+          "description": "Прилёт, заселение на яхту, закупка провизии, брифинг по безопасности. Ночь в марине Ольбии. Можно прогуляться по старому городу.",
+          "duration": "без выхода в море"
         },
         {
-          "number": "02",
+          "number": "Вс",
           "color": "secondary",
-          "distance": "14 миль",
-          "title": "Андратч — Санта-Понса",
-          "description": "Спокойный день у острова Эль-Торо и в бухте Камп-де-Мар. Купание в прозрачной воде, обед на якоре, вечерняя стоянка в Санта-Понса.",
-          "duration": "~3 часа в пути"
+          "distance": "18–22 nm",
+          "title": "Ольбия → Порто-Черво",
+          "description": "Первый переход вдоль Коста-Смеральды. По пути — якорная стоянка в Кала-ди-Вольпе или Порто-Ротондо на обед. Вечером — гламурная марина Порто-Черво.",
+          "duration": "~4 часа"
         },
         {
-          "number": "03",
+          "number": "Пн",
           "color": "primary",
-          "distance": "24 мили",
-          "title": "Санта-Понса — Кала-Пи",
-          "description": "Переход вдоль южного берега мимо Портальс. Финиш в Кала-Пи — драматичной узкой бухте между высокими скалами, одной из самых эффектных на острове.",
-          "duration": "~4.5 часа в пути"
+          "distance": "14–18 nm",
+          "title": "Порто-Черво → Каннигионе",
+          "description": "Проход через Бокка-ди-Бише в национальный парк Маддалена. Каннигионе — маленький городок в закрытом заливе Арцакена, лучшая защита от ветра на всём маршруте.",
+          "duration": "~3.5 часа"
         },
         {
-          "number": "04",
+          "number": "Вт",
           "color": "secondary",
-          "distance": "14 миль",
-          "title": "Кала-Пи — Колония-де-Сант-Жорди",
-          "description": "Путь к Эс-Тренк — пляжу с белоснежным песком и бирюзовой водой в карибском стиле. Якорная стоянка и вечер в рыбацком городке Колония-де-Сант-Жорди.",
-          "duration": "~3 часа в пути"
+          "distance": "12–16 nm",
+          "title": "Каннигионе → Ла-Маддалена",
+          "description": "Через Кала-Портезе на острове Капрера к главному городу архипелага. Ла-Маддалена: заправка, рынок, рестораны, прогулка по набережной.",
+          "duration": "~3 часа"
         },
         {
-          "number": "05",
-          "color": "primary",
-          "distance": "10 миль",
-          "title": "День у Эс-Тренк",
-          "description": "Самый расслабленный день недели. Короткий хоп вдоль заповедного побережья, купание, SUP, обед на борту. Никакой спешки — просто море и солнце.",
-          "duration": "~2 часа в пути"
+          "number": "Ср",
+          "color": "tertiary",
+          "distance": "14–16 nm",
+          "title": "Ла-Маддалена → Бонифачо",
+          "description": "День Корсики. Ранний выход до усиления ветра. Остановка у о. Лавецци (купание ≤2 ч, морской заповедник). Финиш — средневековый Бонифачо с узким фьорд-входом под цитаделью.",
+          "duration": "~3.5 часа (выход на рассвете)"
         },
         {
-          "number": "06",
+          "number": "Чт",
           "color": "secondary",
-          "distance": "24 мили",
-          "title": "Колония — Эль-Торо / Портальс",
-          "description": "Возвращение на запад к острову Эль-Торо и гламурной марине Пуэрто-Портальс. Прогулка по набережной, ужин и коктейль на закате.",
-          "duration": "~4.5 часа в пути"
+          "distance": "0–10 nm",
+          "title": "Днёвка в Бонифачо",
+          "description": "Буферный день на погоду. Если дует — остаёмся в Бонифачо, гуляем по крепости, едим устриц. Если тихо — короткий хоп в бухту Санта-Манца или Рондинара.",
+          "duration": "по прогнозу"
         },
         {
-          "number": "07",
+          "number": "Пт",
           "color": "primary",
-          "distance": "16 миль",
-          "title": "Портальс — Пальма",
-          "description": "Финальный переход в бухту Пальмы с купанием у пляжей Ильетес. Возврат в марину, прощальный ужин и итоги незабываемой недели на Балеарах.",
-          "duration": "~3 часа в пути"
+          "distance": "16–20 nm",
+          "title": "Бонифачо → Каннигионе",
+          "description": "Возвращение ранним утром. По пути — природные бассейны Буделли и Санта-Мария (бирюза, тихая вода даже в ветер, Розовый пляж смотреть с воды). Ночь в Каннигионе.",
+          "duration": "~4 часа"
+        },
+        {
+          "number": "Сб",
+          "color": "secondary",
+          "distance": "18–22 nm",
+          "title": "Каннигионе → Ольбия",
+          "description": "Финальный переход вдоль побережья обратно в Ольбию. Высадка, прощальный завтрак, вылет домой.",
+          "duration": "~4 часа"
         }
       ]
     },
     "faq": [
       {
-        "question": "Нужен ли опыт парусного спорта?",
-        "answer": "Нет, опыт не требуется! С нами идёт свой опытный капитан, который управляет яхтой и отвечает за безопасность. Вы можете участвовать в управлении (поднимать паруса, держать штурвал, швартоваться) или просто наслаждаться путешествием. Маршрут спокойный, с короткими переходами и лёгким возвратом в марину."
+        "question": "Что будет, если в среду задует в проливе Бонифачо?",
+        "answer": "Капитан смотрит прогноз на рассвете и принимает решение. Четверг заложен специально как буфер: если переход в Бонифачо переносится, четверг становится «корсиканским днём», а пятничный возврат сдвигается на субботу. Маршрут гибкий — погода главнее расписания."
       },
       {
-        "question": "Где спать и как устроен быт на яхте?",
-        "answer": "У нас новая Bavaria C50 Style (2024): 4 двухместные каюты для гостей плюс отдельная каюта капитана. На борту 3 санузла с душем, полностью оборудованная кухня (плита, холодильник, посуда), просторный салон, отопление и кондиционер. Постельное бельё и полотенца включены."
+        "question": "Откуда лететь до Ольбии?",
+        "answer": "Ольбия (аэропорт OLB) — основной хаб для Коста-Смеральды. Прямые рейсы из Москвы и крупных европейских городов (Берлин, Вена, Рим, Милан). В начале октября прямых рейсов меньше — часто стыковка через Рим или Милан. Билеты лучше брать заранее."
       },
       {
-        "question": "Какая погода в октябре? Не холодно ли?",
-        "answer": "Начало октября на Майорке — мягкое бабье лето: днём +22-25°C, вода ещё тёплая, около +23°C, можно купаться. Ветра лёгкие и предсказуемые, юго-западный берег закрыт от волны. Вечерами прохладнее (~16°C), поэтому на яхте есть отопление. Идеальное время для спокойного похода без толп туристов."
+        "question": "Нужны ли визы и документы для захода в Бонифачо?",
+        "answer": "Бонифачо — Франция, но Шенгенская зона. Границ нет, паспортный контроль отсутствует. Нужна марина — бронировать заранее звонком (в октябре мест меньше). Судовые документы и страховка — на капитане."
       },
       {
-        "question": "Что входит в стоимость, а что нет?",
-        "answer": "В €1040 с человека входит аренда новой яхты Bavaria C50, свой капитан, стоянки в маринах, постельное бельё, полотенца и топливо. Отдельно оплачиваются перелёт до Пальмы (~€80-150 туда-обратно из Европы) и общий бюджет на еду и напитки (~€300 с человека за неделю)."
-      },
-      {
-        "question": "Нужна ли виза?",
-        "answer": "Испания входит в Шенгенскую зону, поэтому нужна шенгенская виза. Рекомендуем оформлять заранее, за 2-3 месяца до поездки. Вылет удобен из большинства городов Европы — прямые рейсы в Пальму есть отовсюду, перелёт оплачивается отдельно."
+        "question": "Какая погода и вода в начале октября?",
+        "answer": "Вода ~16–18 °C — купание бодрящее. Воздух +20–25 °C днём. Дни короче, чем летом — все переходы утренние, приход засветло. Главный риск: мистраль в проливе Бонифачо (сильный северо-западный ветер), поэтому капитан решает по утреннему прогнозу."
       }
     ],
     "gallery": [
       {
         "id": 1,
-        "title": "Пальма",
-        "description": "Кафедральный собор Ла-Сеу и старый город",
-        "image": "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=1200&q=80"
+        "title": "Коста-Смеральда",
+        "description": "Изумрудные воды и белые яхты Порто-Черво",
+        "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
       },
       {
         "id": 2,
-        "title": "Порт-д'Андратч",
-        "description": "Закрытая бухта на юго-западе острова",
-        "image": "https://images.unsplash.com/photo-1555990538-f8f1c0b3d7c7?w=800&q=80"
+        "title": "Архипелаг Маддалена",
+        "description": "15 островов бирюзовой воды в национальном парке",
+        "image": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=800&q=80"
       },
       {
         "id": 3,
-        "title": "Эс-Тренк",
-        "description": "Белый песок и бирюзовая вода",
-        "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1000&q=80"
+        "title": "Пролив Бонифачо",
+        "description": "Самое узкое место между Сардинией и Корсикой",
+        "image": "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=800&q=80"
       },
       {
         "id": 4,
-        "title": "Кала-Пи",
-        "description": "Драматичная бухта между скалами",
-        "image": "https://images.unsplash.com/photo-1555990538-9f5d0b6dbd1f?w=800&q=80"
+        "title": "Бонифачо",
+        "description": "Средневековая цитадель на белых известняковых скалах",
+        "image": "https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80"
       },
       {
         "id": 5,
-        "title": "Санта-Понса",
-        "description": "Бирюзовые бухты для купания",
-        "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
+        "title": "О. Лавецци",
+        "description": "Морской заповедник в сердце пролива, гранитные глыбы и прозрачная вода",
+        "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80"
       },
       {
         "id": 6,
-        "title": "Пуэрто-Портальс",
-        "description": "Гламурная марина и закаты",
-        "image": "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=600&q=80"
+        "title": "Буделли — природные бассейны",
+        "description": "Бирюза и белый песок, Розовый пляж смотреть с воды",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"
       },
       {
         "id": 7,
-        "title": "Ильетес",
-        "description": "Пляжи в бухте Пальмы",
-        "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1000&q=80"
+        "title": "Bavaria C50 Style",
+        "description": "Наша яхта — 15 метров комфорта и скорости",
+        "image": "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800&q=80"
       },
       {
         "id": 8,
-        "title": "Закат",
-        "description": "Парусная романтика на Балеарах",
-        "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80"
+        "title": "Закат над Сардинией",
+        "description": "Каждый вечер — другой горизонт",
+        "image": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80"
       }
     ]
   },
   "en": {
     "meta": {
-      "pageTitle": "Sailing Mallorca — Balearic Azure",
-      "description": "Sailing Mallorca — a sailing adventure in the Balearic Islands. Discover Cala Pi, Es Trenc, Port d'Andratx and the hidden gems of Mallorca.",
-      "ogTitle": "Sailing Adventure in Mallorca 🌊⛵",
-      "ogDescription": "A week under sail: Palma, Port d'Andratx, Es Trenc, Cala Pi. Bavaria C50 Style, experienced skipper, up to 8 guests. Islands, wind and the blue Balearic Sea.",
+      "pageTitle": "Sailing Sardinia — Sardinia & Corsica",
+      "description": "Sailing adventure Sardinia → Corsica → Sardinia. Olbia, Porto Cervo, La Maddalena, Bonifacio. October 2026, Bavaria C50 Style.",
+      "ogTitle": "Sardinia → Corsica by sail ⛵🌊",
+      "ogDescription": "7 nights: Olbia, Costa Smeralda, Maddalena archipelago, Strait of Bonifacio, medieval Corsica. Bavaria C50 Style, experienced skipper, up to 9 people.",
       "ogUrl": "https://funkydonkey.github.io/sailing-mallorca/",
-      "appleTitle": "Sailing Mallorca"
+      "appleTitle": "Sailing Sardinia"
     },
     "tabs": {
       "gallery": {
-        "heading": "Balearic<br>Azure",
-        "subheading": "Discover the hidden gems of Mallorca — from the dramatic cliffs of Cala Pi to the white sands of Es Trenc."
+        "heading": "Sardinia<br>& Corsica",
+        "subheading": "Costa Smeralda, Maddalena archipelago, Strait of Bonifacio — some of the most stunning waters in the Mediterranean."
       },
       "boat": {
         "name": "Bavaria C50 Style",
         "year": "2024",
-        "subheading": "A modern premium sailing yacht with spacious cabins and full equipment for a comfortable journey in the Balearic Sea.",
+        "subheading": "A modern premium sailing yacht with spacious cabins and full equipment for a comfortable voyage around Sardinia and Corsica.",
         "specsHeading": "Technical Specifications",
         "specs": [
           {
@@ -343,12 +347,12 @@
         ]
       },
       "route": {
-        "heading": "The Balearic<br>Odyssey",
-        "subheading": "A seven-day route along the beautiful coastline of Mallorca. 122 nautical miles of pure pleasure."
+        "heading": "Sardinia<br>→ Corsica",
+        "subheading": "8 days along northern Sardinia to medieval Bonifacio and back. ~122 nautical miles."
       },
       "info": {
-        "heading": "Your Balearic<br>Adventure",
-        "subheading": "Everything included: yacht charter, our own skipper, marina fees, bed linen and fuel. Flights and food are paid separately."
+        "heading": "Your<br>Mediterranean",
+        "subheading": "Everything included: yacht charter, our own skipper, marina fees, bedding and fuel. Flights and food are extra."
       },
       "nav": {
         "gallery": "Gallery",
@@ -363,7 +367,7 @@
     },
     "ui": {
       "priceLabel": "Price per person",
-      "priceDuration": "7 days / 6 nights",
+      "priceDuration": "7 nights / 8 days",
       "faqHeading": "FAQ",
       "routeDistanceLabel": "Total distance",
       "included": {
@@ -375,7 +379,7 @@
             "icon": "sailing",
             "iconColor": "text-secondary",
             "title": "Bavaria C50 Style Yacht Charter",
-            "subtitle": "7 days fully equipped"
+            "subtitle": "8 days fully equipped"
           },
           {
             "icon": "person",
@@ -411,8 +415,8 @@
           {
             "icon": "flight",
             "iconColor": "text-on-surface-variant",
-            "title": "Flights to Palma",
-            "subtitle": "~€80-150 round trip from Europe"
+            "title": "Flight to Olbia",
+            "subtitle": "~€100–200 return from Europe"
           },
           {
             "icon": "restaurant",
@@ -424,7 +428,7 @@
             "icon": "tour",
             "iconColor": "text-on-surface-variant",
             "title": "Excursions",
-            "subtitle": "Artà Caves, Cap de Formentor (optional)"
+            "subtitle": "Bonifacio fortress, Maddalena archipelago (optional)"
           }
         ]
       },
@@ -435,133 +439,137 @@
       "totalDistance": 122,
       "days": [
         {
-          "number": "01",
+          "number": "Sat",
           "color": "primary",
-          "distance": "20 nm",
-          "title": "Palma — Port d'Andratx",
-          "description": "Depart from Palma de Mallorca marina. Meet the boat and crew, safety briefing. Sail along the southwest coast through Santa Ponsa bay to the charming Port d'Andratx.",
-          "duration": "~4 hours sailing"
+          "distance": "— boarding",
+          "title": "Olbia — boarding",
+          "description": "Arrival, boarding the yacht, provisioning, safety briefing. Night in Olbia marina. Optional walk through the old town.",
+          "duration": "no sailing"
         },
         {
-          "number": "02",
+          "number": "Sun",
           "color": "secondary",
-          "distance": "14 nm",
-          "title": "Andratx — Santa Ponsa",
-          "description": "A relaxed day near El Toro island and Camp de Mar bay. Swimming in crystal-clear water, lunch at anchor, evening mooring in Santa Ponsa.",
-          "duration": "~3 hours sailing"
+          "distance": "18–22 nm",
+          "title": "Olbia → Porto Cervo",
+          "description": "First passage along the Costa Smeralda. Lunch anchor in Cala di Volpe or Porto Rotondo. Evening arrival at glamorous Porto Cervo marina.",
+          "duration": "~4 hours"
         },
         {
-          "number": "03",
+          "number": "Mon",
           "color": "primary",
-          "distance": "24 nm",
-          "title": "Santa Ponsa — Cala Pi",
-          "description": "Sailing along the south coast past Portals. Arriving at Cala Pi — a dramatic narrow inlet between towering cliffs, one of the most spectacular on the island.",
-          "duration": "~4.5 hours sailing"
+          "distance": "14–18 nm",
+          "title": "Porto Cervo → Cannigione",
+          "description": "Through the Bocca di Bisie passage into the Maddalena National Park. Cannigione — a small town in the sheltered Arzachena bay, the best wind protection on the whole route.",
+          "duration": "~3.5 hours"
         },
         {
-          "number": "04",
+          "number": "Tue",
           "color": "secondary",
-          "distance": "14 nm",
-          "title": "Cala Pi — Colonia de Sant Jordi",
-          "description": "Heading to Es Trenc — a beach with white sand and turquoise Caribbean-style water. Anchor stop and evening in the fishing village of Colonia de Sant Jordi.",
-          "duration": "~3 hours sailing"
+          "distance": "12–16 nm",
+          "title": "Cannigione → La Maddalena",
+          "description": "Via Cala Portese on Caprera island to the archipelago's main town. La Maddalena: fuel, market, restaurants, waterfront walk.",
+          "duration": "~3 hours"
         },
         {
-          "number": "05",
-          "color": "primary",
-          "distance": "10 nm",
-          "title": "Day at Es Trenc",
-          "description": "The most relaxing day of the week. Short hop along the protected coastline, swimming, SUP, lunch on board. No rush — just sea and sun.",
-          "duration": "~2 hours sailing"
+          "number": "Wed",
+          "color": "tertiary",
+          "distance": "14–16 nm",
+          "title": "La Maddalena → Bonifacio",
+          "description": "Corsica day. Early departure before wind builds. Stop at Lavezzi island (swim ≤2h, marine reserve). Finish at medieval Bonifacio with its narrow fjord entrance beneath the citadel.",
+          "duration": "~3.5 hours (dawn departure)"
         },
         {
-          "number": "06",
+          "number": "Thu",
           "color": "secondary",
-          "distance": "24 nm",
-          "title": "Colonia — El Toro / Portals",
-          "description": "Heading back west to El Toro island and the glamorous Puerto Portals marina. Walk along the promenade, dinner and a cocktail at sunset.",
-          "duration": "~4.5 hours sailing"
+          "distance": "0–10 nm",
+          "title": "Layover in Bonifacio",
+          "description": "Weather buffer day. If it's blowing — stay in Bonifacio, walk the fortress, eat oysters. If calm — short hop to Santa Manza bay or Rondinara.",
+          "duration": "by forecast"
         },
         {
-          "number": "07",
+          "number": "Fri",
           "color": "primary",
-          "distance": "16 nm",
-          "title": "Portals — Palma",
-          "description": "Final crossing into Palma bay with swimming at Illetes beach. Return to the marina, farewell dinner and memories of an unforgettable week in the Balearics.",
-          "duration": "~3 hours sailing"
+          "distance": "16–20 nm",
+          "title": "Bonifacio → Cannigione",
+          "description": "Return passage in the early morning. En route — natural pools of Budelli and Santa Maria (crystal water, calm even in wind; Pink Beach to admire from the boat). Night in Cannigione.",
+          "duration": "~4 hours"
+        },
+        {
+          "number": "Sat",
+          "color": "secondary",
+          "distance": "18–22 nm",
+          "title": "Cannigione → Olbia",
+          "description": "Final passage back to Olbia along the coast. Disembark, farewell breakfast, fly home.",
+          "duration": "~4 hours"
         }
       ]
     },
     "faq": [
       {
-        "question": "Do I need sailing experience?",
-        "answer": "No experience needed! We have our own experienced skipper who handles the boat and is responsible for safety. You can participate in sailing (raise sails, take the helm, help with mooring) or simply enjoy the journey. The route is calm, with short passages and easy marina returns."
+        "question": "What if the Strait of Bonifacio is windy on Wednesday?",
+        "answer": "The skipper checks the forecast at dawn and decides. Thursday is built in as a buffer: if the Bonifacio crossing shifts to Thursday, Friday becomes the return day. The schedule is flexible — weather comes first."
       },
       {
-        "question": "Where do we sleep and what's life like on board?",
-        "answer": "We have a brand-new Bavaria C50 Style (2024): 4 double guest cabins plus a separate skipper's cabin. On board: 3 bathrooms with shower, fully equipped galley (stove, fridge, crockery), spacious saloon, heating and air conditioning. Bed linen and towels included."
+        "question": "How do we fly to Olbia?",
+        "answer": "Olbia (OLB) is the main gateway to Costa Smeralda. Direct flights from major European cities (Berlin, Vienna, Rome, Milan). In early October direct options are fewer — often a connection through Rome or Milan. Book early."
       },
       {
-        "question": "What's the weather like in October? Is it cold?",
-        "answer": "Early October in Mallorca is a warm Indian summer: daytime temperatures +22-25°C, sea water still warm at around +23°C — perfect for swimming. Winds are light and predictable, the southwest coast is sheltered from waves. Evenings are cooler (~16°C), but the yacht has heating. The ideal time for a relaxed cruise without crowds."
+        "question": "Do we need visas or documents for Bonifacio?",
+        "answer": "Bonifacio is France but inside the Schengen Area — no border checks. Marina booking is required (fewer spots in October, call ahead). All vessel documents and insurance are the skipper's responsibility."
       },
       {
-        "question": "What's included in the price, and what's not?",
-        "answer": "The €1040 per person covers the brand-new Bavaria C50 yacht charter, our own skipper, marina fees, bed linen, towels and fuel. Flights to Palma (~€80-150 round trip from Europe) and a shared food & drinks budget (~€300 per person for the week) are paid separately."
-      },
-      {
-        "question": "Do I need a visa?",
-        "answer": "Spain is part of the Schengen zone, so a Schengen visa is required. We recommend applying well in advance, 2-3 months before the trip. Flights are convenient from most European cities — direct flights to Palma are available everywhere, flights are paid separately."
+        "question": "What's the weather and water like in early October?",
+        "answer": "Water ~16–18 °C — refreshing rather than warm. Air temp +20–25 °C daytime. Days are shorter than summer, so all passages are morning runs with arrival before dark. Key risk: Mistral in the Strait of Bonifacio (strong NW wind) — the skipper decides each morning."
       }
     ],
     "gallery": [
       {
         "id": 1,
-        "title": "Palma",
-        "description": "La Seu Cathedral and the old city",
-        "image": "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=1200&q=80"
+        "title": "Costa Smeralda",
+        "description": "Emerald waters and white yachts of Porto Cervo",
+        "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
       },
       {
         "id": 2,
-        "title": "Port d'Andratx",
-        "description": "Sheltered bay on the southwest of the island",
-        "image": "https://images.unsplash.com/photo-1555990538-f8f1c0b3d7c7?w=800&q=80"
+        "title": "Maddalena Archipelago",
+        "description": "15 islands of turquoise water in the national park",
+        "image": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=800&q=80"
       },
       {
         "id": 3,
-        "title": "Es Trenc",
-        "description": "White sand and turquoise water",
-        "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1000&q=80"
+        "title": "Strait of Bonifacio",
+        "description": "The narrowest point between Sardinia and Corsica",
+        "image": "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=800&q=80"
       },
       {
         "id": 4,
-        "title": "Cala Pi",
-        "description": "Dramatic inlet between towering cliffs",
-        "image": "https://images.unsplash.com/photo-1555990538-9f5d0b6dbd1f?w=800&q=80"
+        "title": "Bonifacio",
+        "description": "Medieval citadel on white limestone cliffs",
+        "image": "https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80"
       },
       {
         "id": 5,
-        "title": "Santa Ponsa",
-        "description": "Turquoise bays for swimming",
-        "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
+        "title": "Lavezzi Island",
+        "description": "Marine reserve in the heart of the strait — granite boulders and crystal water",
+        "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80"
       },
       {
         "id": 6,
-        "title": "Puerto Portals",
-        "description": "Glamorous marina and sunsets",
-        "image": "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=600&q=80"
+        "title": "Budelli — Natural Pools",
+        "description": "Turquoise and white sand; admire the Pink Beach from the water",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"
       },
       {
         "id": 7,
-        "title": "Illetes",
-        "description": "Beaches in Palma Bay",
-        "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1000&q=80"
+        "title": "Bavaria C50 Style",
+        "description": "Our yacht — 15 metres of comfort and speed",
+        "image": "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800&q=80"
       },
       {
         "id": 8,
-        "title": "Sunset",
-        "description": "Sailing romance in the Balearics",
-        "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80"
+        "title": "Sardinian Sunset",
+        "description": "Every evening — a different horizon",
+        "image": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80"
       }
     ]
   }
