@@ -207,7 +207,61 @@
             });
         }
 
+        // 11. Boat photo carousel
+        initBoatCarousel();
+
         console.log('Maritime Minimalism - Sailing Mallorca initialized');
+    }
+
+    function initBoatCarousel() {
+        const carousel = document.getElementById('boat-carousel');
+        const track = document.getElementById('boat-track');
+        const dotsWrap = document.getElementById('boat-dots');
+        if (!carousel || !track || !dotsWrap) return;
+        const slides = Array.from(track.children);
+        const count = slides.length;
+        if (count <= 1) return;
+
+        let index = 0;
+        let timer = null;
+
+        dotsWrap.innerHTML = slides.map((_, i) =>
+            `<button type="button" class="boat-dot h-2.5 rounded-full bg-white/50 transition-all" aria-label="Go to photo ${i + 1}"></button>`
+        ).join('');
+        const dots = Array.from(dotsWrap.children);
+
+        function go(i) {
+            index = (i + count) % count;
+            track.style.transform = `translateX(-${index * 100}%)`;
+            dots.forEach((d, di) => {
+                const active = di === index;
+                d.classList.toggle('bg-white', active);
+                d.classList.toggle('w-6', active);
+                d.classList.toggle('bg-white/50', !active);
+                d.classList.toggle('w-2.5', !active);
+            });
+        }
+        const next = () => go(index + 1);
+        const prev = () => go(index - 1);
+        const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
+        const start = () => { stop(); timer = setInterval(next, 5000); };
+
+        carousel.querySelector('.boat-next').addEventListener('click', () => { next(); start(); });
+        carousel.querySelector('.boat-prev').addEventListener('click', () => { prev(); start(); });
+        dots.forEach((d, i) => d.addEventListener('click', () => { go(i); start(); }));
+        carousel.addEventListener('mouseenter', stop);
+        carousel.addEventListener('mouseleave', start);
+
+        let startX = 0;
+        carousel.addEventListener('touchstart', e => { startX = e.touches[0].clientX; stop(); }, { passive: true });
+        carousel.addEventListener('touchend', e => {
+            const dx = e.changedTouches[0].clientX - startX;
+            if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); }
+            start();
+        }, { passive: true });
+
+        go(0);
+        start();
     }
 
     function initRouteMap() {

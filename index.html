@@ -360,13 +360,27 @@
 
                 <!-- Hero with Photo -->
                 <div class="mb-16 md:mb-24">
-                    <div class="relative h-[400px] md:h-[600px] rounded-xl overflow-hidden editorial-shadow mb-8">
-                        <img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=1400&q=80"
-                             alt="Bavaria C42"
-                             class="w-full h-full object-cover">
-                        <div id="boat-year" class="absolute top-6 right-6 bg-tertiary-fixed text-on-tertiary-fixed-variant px-4 py-2 rounded-full text-sm font-medium font-label">
+                    <div id="boat-carousel" class="relative h-[400px] md:h-[600px] rounded-xl overflow-hidden editorial-shadow mb-8 group">
+                        <div id="boat-track" class="flex h-full transition-transform duration-700 ease-out">
+                            <img src="https://imageresizer.yachtsbt.com/boats/63b433e813c61b156407e27c/64784a1546460a88e7014764.jpg?method=fit&width=2044&height=900&format=webp"
+                                 alt="Beneteau Oceanis 46.1" class="w-full flex-shrink-0 h-full object-cover">
+                            <img src="https://imageresizer.yachtsbt.com/boats/63b433e813c61b156407e27c/63b4347a47525d057b0ac68f.jpg?method=fit&width=2044&height=900&format=webp"
+                                 alt="Beneteau Oceanis 46.1" class="w-full flex-shrink-0 h-full object-cover" loading="lazy">
+                            <img src="https://imageresizer.yachtsbt.com/boats/63b433e813c61b156407e27c/64784a1346460a88e701475a.jpg?method=fit&width=2044&height=900&format=webp"
+                                 alt="Beneteau Oceanis 46.1" class="w-full flex-shrink-0 h-full object-cover" loading="lazy">
+                            <img src="https://imageresizer.yachtsbt.com/boats/63b433e813c61b156407e27c/64784a1446460a88e701475e.jpg?method=fit&width=2044&height=900&format=webp"
+                                 alt="Beneteau Oceanis 46.1" class="w-full flex-shrink-0 h-full object-cover" loading="lazy">
+                        </div>
+                        <div id="boat-year" class="absolute top-6 right-6 z-10 bg-tertiary-fixed text-on-tertiary-fixed-variant px-4 py-2 rounded-full text-sm font-medium font-label">
                             2024
                         </div>
+                        <button type="button" class="boat-prev absolute left-4 top-1/2 -translate-y-1/2 z-10 w-11 h-11 flex items-center justify-center rounded-full bg-black/30 text-white backdrop-blur-sm opacity-100 md:opacity-0 md:group-hover:opacity-100 focus:opacity-100 transition-opacity hover:bg-black/50" aria-label="Previous photo">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button type="button" class="boat-next absolute right-4 top-1/2 -translate-y-1/2 z-10 w-11 h-11 flex items-center justify-center rounded-full bg-black/30 text-white backdrop-blur-sm opacity-100 md:opacity-0 md:group-hover:opacity-100 focus:opacity-100 transition-opacity hover:bg-black/50" aria-label="Next photo">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                        <div id="boat-dots" class="absolute bottom-5 left-1/2 -translate-x-1/2 z-10 flex gap-2"></div>
                     </div>
 
                     <h1 id="hero-boat-name" class="text-5xl md:text-7xl font-bold tracking-tight text-primary mb-4 font-headline">
