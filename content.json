@@ -134,8 +134,8 @@
           {
             "icon": "restaurant",
             "iconColor": "text-on-surface-variant",
-            "title": "Питание",
-            "subtitle": "~€300 на человека за неделю"
+            "title": "Бухло и рестораны",
+            "subtitle": "каждому по способностям"
           },
           {
             "icon": "tour",
@@ -219,20 +219,20 @@
     },
     "faq": [
       {
+        "question": "Где мы будем жить?",
+        "answer": "На лодке. Лодка оснащена комфортабельными каютами с кроватями, душами и кухней."
+      }, 
+       {
+        "question": "Какая погода и вода в начале октября?",
+        "answer": "Вода ~16–18 °C — купание бодрящее. Воздух +20–25 °C днём. Дни короче, чем летом — все переходы утренние, приход засветло. Главный риск: мистраль в проливе Бонифачо (сильный северо-западный ветер), поэтому капитан решает по утреннему прогнозу."
+      },
+      {
         "question": "Что будет, если в среду задует в проливе Бонифачо?",
         "answer": "Капитан смотрит прогноз на рассвете и принимает решение. Четверг заложен специально как буфер: если переход в Бонифачо переносится, четверг становится «корсиканским днём», а пятничный возврат сдвигается на субботу. Маршрут гибкий — погода главнее расписания."
       },
       {
-        "question": "Откуда лететь до Ольбии?",
-        "answer": "Ольбия (аэропорт OLB) — основной хаб для Коста-Смеральды. Прямые рейсы из Москвы и крупных европейских городов (Берлин, Вена, Рим, Милан). В начале октября прямых рейсов меньше — часто стыковка через Рим или Милан. Билеты лучше брать заранее."
-      },
-      {
         "question": "Нужны ли визы и документы для захода в Бонифачо?",
         "answer": "Бонифачо — Франция, но Шенгенская зона. Границ нет, паспортный контроль отсутствует. Нужна марина — бронировать заранее звонком (в октябре мест меньше). Судовые документы и страховка — на капитане."
-      },
-      {
-        "question": "Какая погода и вода в начале октября?",
-        "answer": "Вода ~16–18 °C — купание бодрящее. Воздух +20–25 °C днём. Дни короче, чем летом — все переходы утренние, приход засветло. Главный риск: мистраль в проливе Бонифачо (сильный северо-западный ветер), поэтому капитан решает по утреннему прогнозу."
       }
     ],
     "gallery": [
@@ -421,8 +421,8 @@
           {
             "icon": "restaurant",
             "iconColor": "text-on-surface-variant",
-            "title": "Food & Drinks",
-            "subtitle": "~€300 per person for the week"
+            "title": "Booze & Restaurants",
+            "subtitle": "to each according to their means"
           },
           {
             "icon": "tour",
@@ -506,20 +506,20 @@
     },
     "faq": [
       {
-        "question": "What if the Strait of Bonifacio is windy on Wednesday?",
-        "answer": "The skipper checks the forecast at dawn and decides. Thursday is built in as a buffer: if the Bonifacio crossing shifts to Thursday, Friday becomes the return day. The schedule is flexible — weather comes first."
-      },
-      {
-        "question": "How do we fly to Olbia?",
-        "answer": "Olbia (OLB) is the main gateway to Costa Smeralda. Direct flights from major European cities (Berlin, Vienna, Rome, Milan). In early October direct options are fewer — often a connection through Rome or Milan. Book early."
-      },
-      {
-        "question": "Do we need visas or documents for Bonifacio?",
-        "answer": "Bonifacio is France but inside the Schengen Area — no border checks. Marina booking is required (fewer spots in October, call ahead). All vessel documents and insurance are the skipper's responsibility."
+        "question": "Where will we stay?",
+        "answer": "On the boat. It has comfortable cabins with beds, showers and a galley."
       },
       {
         "question": "What's the weather and water like in early October?",
         "answer": "Water ~16–18 °C — refreshing rather than warm. Air temp +20–25 °C daytime. Days are shorter than summer, so all passages are morning runs with arrival before dark. Key risk: Mistral in the Strait of Bonifacio (strong NW wind) — the skipper decides each morning."
+      },
+      {
+        "question": "What if the Strait of Bonifacio is windy on Wednesday?",
+        "answer": "The skipper checks the forecast at dawn and decides. Thursday is built in as a buffer: if the Bonifacio crossing shifts to Thursday, Friday becomes the return day. The schedule is flexible — weather comes first."
+      },
+      {
+        "question": "Do we need visas or documents for Bonifacio?",
+        "answer": "Bonifacio is France but inside the Schengen Area — no border checks. Marina booking is required (fewer spots in October, call ahead). All vessel documents and insurance are the skipper's responsibility."
       }
     ],
     "gallery": [
