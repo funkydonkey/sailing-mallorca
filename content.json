@@ -2,9 +2,9 @@
   "ru": {
     "meta": {
       "pageTitle": "Sailing Sardinia — Сардиния & Корсика",
-      "description": "Парусное путешествие Сардиния → Корсика → Сардиния. Ольбия, Порто-Черво, Ла-Маддалена, Бонифачо. Октябрь 2026, Bavaria C50 Style.",
+      "description": "Парусное путешествие Сардиния → Корсика → Сардиния. Ольбия, Порто-Черво, Ла-Маддалена, Бонифачо. Октябрь 2026.",
       "ogTitle": "Сардиния → Корсика под парусом ⛵🌊",
-      "ogDescription": "7 ночей: Ольбия, Коста-Смеральда, архипелаг Маддалена, пролив Бонифачо, средневековая Корсика. Bavaria C50 Style, опытный капитан, до 9 человек.",
+      "ogDescription": "7 ночей: Ольбия, Коста-Смеральда, архипелаг Маддалена, пролив Бонифачо, средневековая Корсика. Мо капитан и опытный капитан на бэке, до 9 человек.",
       "ogUrl": "https://funkydonkey.github.io/sailing-mallorca/",
       "appleTitle": "Sailing Sardinia"
     },
@@ -16,7 +16,7 @@
       "boat": {
         "name": "Beneteau Oceanis 46.1",
         "year": "2023",
-        "subheading": "Современная 4-каютная яхта 2023 года постройки. 14.6 м длины, кондиционер, кофемашина, платформа для купания — всё для комфортного недельного плавания.",
+        "subheading": "Современная 4-каютная яхта 2023 года постройки. 14.6 м длины, просторная кают-кампания, кухня, души, платформа для купания — всё для комфортного недельного плавания.",
         "specsHeading": "Технические характеристики",
         "specs": [
           {
@@ -26,7 +26,7 @@
           },
           {
             "icon": "bed",
-            "value": "4",
+            "value": "4+1",
             "label": "Каюты"
           },
           {
@@ -43,19 +43,19 @@
         "equipmentHeading": "Оснащение на борту",
         "equipment": [
           {
-            "icon": "navigation",
-            "heading": "Навигация",
-            "description": "Внешний GPS картплоттер, автопилот, подруливающее устройство — полный набор для уверенного судовождения"
+            "icon": "sailing",
+            "heading": "Паруса и мотор",
+            "description": "Все чтобы ходить под парусом или на моторе если лень."
           },
           {
             "icon": "ac_unit",
             "heading": "Комфорт",
-            "description": "Кондиционер, кофемашина, духовка, холодильник, полотенца и постельное бельё — всё включено"
+            "description": "Духовка, холодильник, постельное бельё — всё включено"
           },
           {
             "icon": "pool",
             "heading": "Отдых на воде",
-            "description": "Платформа для купания, надувная шлюпка, бимини-тент, наружные динамики, телевизор"
+            "description": "Платформа для купания, надувная шлюпка, бимини-тент, наружные динамики"
           }
         ]
       },
@@ -64,8 +64,8 @@
         "subheading": "8 дней вдоль северной Сардинии до средневекового Бонифачо и обратно. ~122 морские мили."
       },
       "info": {
-        "heading": "Ваше<br>Средиземноморье",
-        "subheading": "В стоимость включено: аренда яхты, свой капитан, марины, постельное бельё и топливо. Перелёт и питание оплачиваются отдельно."
+        "heading": "Классика<br>Средиземноморья",
+        "subheading": "В стоимость включено: аренда яхты, страховка, стоянка в маринах, топливо, питание. Перелёт и питание оплачиваются отдельно."
       },
       "nav": {
         "gallery": "Галерея",
@@ -97,14 +97,14 @@
           {
             "icon": "person",
             "iconColor": "text-secondary",
-            "title": "Свой опытный капитан",
-            "subtitle": "Со знанием местных вод"
+            "title": "Опытный капитан на подстраховкке",
+            "subtitle": "который еще и классный чувак"
           },
           {
             "icon": "anchor",
             "iconColor": "text-secondary",
             "title": "Стоянки в маринах",
-            "subtitle": "На протяжении всего маршрута"
+            "subtitle": "Но будем стараться чаще стоять на якоре."
           },
           {
             "icon": "bed",
@@ -289,9 +289,9 @@
   "en": {
     "meta": {
       "pageTitle": "Sailing Sardinia — Sardinia & Corsica",
-      "description": "Sailing adventure Sardinia → Corsica → Sardinia. Olbia, Porto Cervo, La Maddalena, Bonifacio. October 2026, Bavaria C50 Style.",
+      "description": "Sailing adventure Sardinia → Corsica → Sardinia. Olbia, Porto Cervo, La Maddalena, Bonifacio. October 2026.",
       "ogTitle": "Sardinia → Corsica by sail ⛵🌊",
-      "ogDescription": "7 nights: Olbia, Costa Smeralda, Maddalena archipelago, Strait of Bonifacio, medieval Corsica. Bavaria C50 Style, experienced skipper, up to 9 people.",
+      "ogDescription": "7 nights: Olbia, Costa Smeralda, Maddalena archipelago, Strait of Bonifacio, medieval Corsica. Mo as skipper plus an experienced captain backing up, up to 9 people.",
       "ogUrl": "https://funkydonkey.github.io/sailing-mallorca/",
       "appleTitle": "Sailing Sardinia"
     },
@@ -303,7 +303,7 @@
       "boat": {
         "name": "Beneteau Oceanis 46.1",
         "year": "2023",
-        "subheading": "Modern 4-cabin yacht built in 2023. 14.6 m length, A/C, coffee machine, swim platform — everything for a comfortable week at sea.",
+        "subheading": "Modern 4-cabin yacht built in 2023. 14.6 m length, spacious saloon, galley, showers, swim platform — everything for a comfortable week at sea.",
         "specsHeading": "Technical Specifications",
         "specs": [
           {
@@ -313,7 +313,7 @@
           },
           {
             "icon": "bed",
-            "value": "4",
+            "value": "4+1",
             "label": "Cabins"
           },
           {
@@ -330,19 +330,19 @@
         "equipmentHeading": "On-board Equipment",
         "equipment": [
           {
-            "icon": "navigation",
-            "heading": "Navigation",
-            "description": "External GPS chartplotter, autopilot, bow thruster — a complete set for confident sailing"
+            "icon": "sailing",
+            "heading": "Sails & Engine",
+            "description": "Everything to sail — or motor when you're feeling lazy."
           },
           {
             "icon": "ac_unit",
             "heading": "Comfort",
-            "description": "A/C, coffee machine, oven, fridge, towels and bedding — all included"
+            "description": "Oven, fridge, bedding — all included"
           },
           {
             "icon": "pool",
             "heading": "Water fun",
-            "description": "Swim platform, inflatable dinghy, Bimini, external speakers, flat screen TV"
+            "description": "Swim platform, inflatable dinghy, Bimini, external speakers"
           }
         ]
       },
@@ -351,8 +351,8 @@
         "subheading": "8 days along northern Sardinia to medieval Bonifacio and back. ~122 nautical miles."
       },
       "info": {
-        "heading": "Your<br>Mediterranean",
-        "subheading": "Everything included: yacht charter, our own skipper, marina fees, bedding and fuel. Flights and food are extra."
+        "heading": "Classic<br>Mediterranean",
+        "subheading": "Everything included: yacht charter, insurance, marina fees, fuel, meals. Flights and food are extra."
       },
       "nav": {
         "gallery": "Gallery",
@@ -384,14 +384,14 @@
           {
             "icon": "person",
             "iconColor": "text-secondary",
-            "title": "Our Own Experienced Skipper",
-            "subtitle": "With local knowledge"
+            "title": "Experienced Captain as Backup",
+            "subtitle": "who's also a great guy"
           },
           {
             "icon": "anchor",
             "iconColor": "text-secondary",
             "title": "Marina Fees",
-            "subtitle": "Throughout the whole route"
+            "subtitle": "But we'll try to anchor out more often."
           },
           {
             "icon": "bed",
