@@ -63,8 +63,13 @@
                     if (!_routeMap) initRouteMap();
                     else _routeMap.invalidateSize();
                 }));
-                // fallback for slow mobile renderers
-                setTimeout(() => { if (_routeMap) _routeMap.invalidateSize(); }, 400);
+                // fallback: rAF is throttled when the tab is backgrounded or on some
+                // mobile browsers, so the double-rAF above may never fire. Create the
+                // map here if it still doesn't exist, otherwise just fix its size.
+                setTimeout(() => {
+                    if (!_routeMap) initRouteMap();
+                    else _routeMap.invalidateSize();
+                }, 400);
             }
         }
         tabButtons.forEach(b => b.addEventListener('click', function() { switchTab(this.dataset.tab); }));
