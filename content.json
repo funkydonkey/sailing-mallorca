@@ -65,7 +65,7 @@
       },
       "info": {
         "heading": "Классика<br>Средиземноморья",
-        "subheading": "В стоимость включено: аренда яхты, страховка, стоянка в маринах, топливо, питание. Перелёт и питание оплачиваются отдельно."
+        "subheading": "В стоимость включено: аренда яхты, питание, страховка, стоянка в маринах, топливо. Перелёт оплачиваются отдельно."
       },
       "nav": {
         "gallery": "Галерея",
@@ -113,10 +113,10 @@
             "subtitle": "Комплект на каждого"
           },
           {
-            "icon": "local_gas_station",
+            "icon": "restaurant",
             "iconColor": "text-secondary",
-            "title": "Топливо",
-            "subtitle": "Для всех переходов"
+            "title": "Питание",
+            "subtitle": "Рассчитано 300 евро на человека, может быть +-"
           }
         ]
       },
@@ -164,7 +164,7 @@
           "color": "secondary",
           "distance": "18–22 nm",
           "title": "Ольбия → Порто-Черво",
-          "description": "Первый переход вдоль Коста-Смеральды. По пути — якорная стоянка в Кала-ди-Вольпе или Порто-Ротондо на обед. Вечером — гламурная марина Порто-Черво.",
+          "description": "Первый переход вдоль Коста-Смеральды. По пути — якорная стоянка в Кала-ди-Вольпе или Порто-Ротондо на обед. Вечером — марина Порто-Черво.",
           "duration": "~4 часа"
         },
         {
@@ -204,7 +204,7 @@
           "color": "primary",
           "distance": "16–20 nm",
           "title": "Бонифачо → Каннигионе",
-          "description": "Возвращение ранним утром. По пути — природные бассейны Буделли и Санта-Мария (бирюза, тихая вода даже в ветер, Розовый пляж смотреть с воды). Ночь в Каннигионе.",
+          "description": "Возвращение ранним утром. По пути — природные бассейны Буделли и Санта-Мария (бирюза, тихая вода даже в ветер, красивый пляж). Ночь в Каннигионе.",
           "duration": "~4 часа"
         },
         {
@@ -239,14 +239,14 @@
       {
         "id": 1,
         "title": "Порто-Черво, Коста-Смеральда",
-        "description": "Изумрудные воды и белые яхты самой гламурной марины Сардинии",
-        "image": "https://images.unsplash.com/photo-1601621915196-2621bfb0cd6e?w=1200&q=85"
+        "description": "Гламурная марина Коста-Смеральды — мегаяхты и изумрудная вода",
+        "image": "images/sardinia/sardinia-3245.jpg"
       },
       {
         "id": 2,
-        "title": "Архипелаг Маддалена",
-        "description": "15 островов бирюзовой воды в национальном парке Сардинии",
-        "image": "https://images.unsplash.com/photo-1559571509-1b5c9241070b?w=1200&q=85"
+        "title": "Прозрачные воды архипелага",
+        "description": "Бирюза и чистейшая вода национального парка Маддалена",
+        "image": "images/sardinia/sardinia-3365.jpg"
       },
       {
         "id": 3,
@@ -257,32 +257,32 @@
       {
         "id": 4,
         "title": "Пролив Бонифачо",
-        "description": "Между Сардинией и Корсикой — самое оживлённое место Средиземноморья",
-        "image": "https://images.unsplash.com/photo-1503803548695-c2a7b4a5b875?w=1200&q=85"
+        "description": "Белые скалы Корсики с борта яхты",
+        "image": "images/sardinia/sardinia-3253.jpg"
       },
       {
         "id": 5,
-        "title": "Острова Буделли и Санта-Мария",
-        "description": "Природные бассейны архипелага — бирюза и белый песок",
-        "image": "https://images.unsplash.com/photo-1574202257847-2692a9f237fa?w=1200&q=85"
+        "title": "Скалы Бонифачо",
+        "description": "Город на белых известняковых утёсах над бирюзовой водой",
+        "image": "images/sardinia/sardinia-3286.jpg"
       },
       {
         "id": 6,
-        "title": "Beneteau Oceanis 46.1 — Persefone",
-        "description": "Наша яхта 2023 года постройки, марина Ольбия",
-        "image": "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=1200&q=85"
+        "title": "Свежий улов",
+        "description": "Рыбак с утренним уловом — прямо к столу",
+        "image": "images/sardinia/sardinia-3282.jpg"
       },
       {
         "id": 7,
-        "title": "Ла-Маддалена",
-        "description": "Главный город архипелага — рестораны, провизия, закат с набережной",
-        "image": "https://images.unsplash.com/photo-1508928310938-32045c51ef6f?w=1200&q=85"
+        "title": "Закат на якоре",
+        "description": "Тихий вечер на якорной стоянке",
+        "image": "images/sardinia/sardinia-3353.jpg"
       },
       {
         "id": 8,
-        "title": "Закат над Сардинией",
-        "description": "Каждый вечер — другой горизонт",
-        "image": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=1200&q=85"
+        "title": "Средиземноморские краски",
+        "description": "Бугенвиллея над старыми улочками",
+        "image": "images/sardinia/sardinia-3328.jpg"
       }
     ]
   },
@@ -352,7 +352,7 @@
       },
       "info": {
         "heading": "Classic<br>Mediterranean",
-        "subheading": "Everything included: yacht charter, insurance, marina fees, fuel, meals. Flights and food are extra."
+        "subheading": "Everything included: yacht charter, meals, insurance, marina fees, fuel. Flights are extra."
       },
       "nav": {
         "gallery": "Gallery",
@@ -400,10 +400,10 @@
             "subtitle": "One set per person"
           },
           {
-            "icon": "local_gas_station",
+            "icon": "restaurant",
             "iconColor": "text-secondary",
-            "title": "Fuel",
-            "subtitle": "For all passages"
+            "title": "Meals",
+            "subtitle": "~€300 per person, give or take"
           }
         ]
       },
@@ -526,14 +526,14 @@
       {
         "id": 1,
         "title": "Porto Cervo, Costa Smeralda",
-        "description": "Emerald waters and white yachts of Sardinia's most glamorous marina",
-        "image": "https://images.unsplash.com/photo-1601621915196-2621bfb0cd6e?w=1200&q=85"
+        "description": "Costa Smeralda's glamorous marina — megayachts and emerald water",
+        "image": "images/sardinia/sardinia-3245.jpg"
       },
       {
         "id": 2,
-        "title": "Maddalena Archipelago",
-        "description": "15 islands of turquoise water in Sardinia's national park",
-        "image": "https://images.unsplash.com/photo-1559571509-1b5c9241070b?w=1200&q=85"
+        "title": "Crystal-clear archipelago waters",
+        "description": "Turquoise, pristine water of the Maddalena national park",
+        "image": "images/sardinia/sardinia-3365.jpg"
       },
       {
         "id": 3,
@@ -544,14 +544,14 @@
       {
         "id": 4,
         "title": "Strait of Bonifacio",
-        "description": "Between Sardinia and Corsica — one of the Mediterranean's busiest straits",
-        "image": "https://images.unsplash.com/photo-1503803548695-c2a7b4a5b875?w=1200&q=85"
+        "description": "Corsica's white cliffs seen from the deck",
+        "image": "images/sardinia/sardinia-3253.jpg"
       },
       {
         "id": 5,
-        "title": "Budelli & Santa Maria Islands",
-        "description": "Natural pools of the archipelago — turquoise and white sand",
-        "image": "https://images.unsplash.com/photo-1574202257847-2692a9f237fa?w=1200&q=85"
+        "title": "Cliffs of Bonifacio",
+        "description": "The town on white limestone cliffs above turquoise water",
+        "image": "images/sardinia/sardinia-3286.jpg"
       },
       {
         "id": 6,
