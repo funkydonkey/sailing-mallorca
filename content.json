@@ -239,8 +239,8 @@
       {
         "id": 1,
         "title": "Порто-Черво, Коста-Смеральда",
-        "description": "Гламурная марина Коста-Смеральды — мегаяхты и изумрудная вода",
-        "image": "images/sardinia/sardinia-3245.jpg"
+        "description": "Белоснежная церковь Стелла Марис в сердце Коста-Смеральды",
+        "image": "images/sardinia/sardinia-3239.jpg"
       },
       {
         "id": 2,
@@ -262,9 +262,9 @@
       },
       {
         "id": 5,
-        "title": "Скалы Бонифачо",
-        "description": "Город на белых известняковых утёсах над бирюзовой водой",
-        "image": "images/sardinia/sardinia-3286.jpg"
+        "title": "Порт Бонифачо",
+        "description": "Яхты в узком фьорде под средневековой цитаделью",
+        "image": "images/sardinia/sardinia-3271.jpg"
       },
       {
         "id": 6,
@@ -526,8 +526,8 @@
       {
         "id": 1,
         "title": "Porto Cervo, Costa Smeralda",
-        "description": "Costa Smeralda's glamorous marina — megayachts and emerald water",
-        "image": "images/sardinia/sardinia-3245.jpg"
+        "description": "The white Stella Maris church in the heart of Costa Smeralda",
+        "image": "images/sardinia/sardinia-3239.jpg"
       },
       {
         "id": 2,
@@ -549,9 +549,9 @@
       },
       {
         "id": 5,
-        "title": "Cliffs of Bonifacio",
-        "description": "The town on white limestone cliffs above turquoise water",
-        "image": "images/sardinia/sardinia-3286.jpg"
+        "title": "Port of Bonifacio",
+        "description": "Yachts in the narrow fjord below the medieval citadel",
+        "image": "images/sardinia/sardinia-3271.jpg"
       },
       {
         "id": 6,

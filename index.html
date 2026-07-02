@@ -101,6 +101,12 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
+        /* Sunset photo (id 7) is a tall shot with the horizon low in frame —
+           shift the crop down so the sunset stays visible in the wide card. */
+        .gallery-card[data-gallery-id="7"] img {
+            object-position: center 72%;
+        }
+
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
